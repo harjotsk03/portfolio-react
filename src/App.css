@@ -1,3 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.light {
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+
+.dark {
+  --background-color: #333333;
+  --text-color: #ffffff;
+}
+
 .App {
-  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding-top: 50px; /* Adjust this value to match the height of your navbar */
+}
+
+button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: orange;
+  padding: 2vmin;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.homeContent {
+  margin-top: 2vmin;
+  padding: 3vmin;
+  height: 100vh;
+}
+
+.aboutContent {
+  margin-top: 2vmin;
+  padding: 3vmin;
+  height: 100vh;
 }
