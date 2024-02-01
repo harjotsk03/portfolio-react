@@ -5,6 +5,7 @@ import heroImage from '../images/image1.png';
 import { ScrollToTop } from '../components/ScrollToTop';
 import HarjotResume from '../images/harjotKoonerResume.pdf'
 import { Contact } from '../components/Contact';
+import { About } from '../components/About';
 
 
 export const Home = () => {
@@ -37,8 +38,8 @@ export const Home = () => {
         <h2 className='projectsTitle'>Projects</h2>
         <Projects />
       </section>
-      <section className='aboutSection' id='about'>
-        
+      <section id='about'>
+        <About />
       </section>
       <section className='contactSection' id='contact'>
         <Contact />

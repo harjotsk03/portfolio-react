@@ -75,7 +75,7 @@ const Navbar = ({ onToggleTheme, theme }) => {
               to="projects"
               smooth={true}
               duration={1000}
-              offset={-100}
+              offset={-140}
               ease="easeInOutQuart"
             >
               Projects
@@ -85,7 +85,7 @@ const Navbar = ({ onToggleTheme, theme }) => {
               to="about"
               smooth={true}
               duration={1000}
-              offset={-100}
+              offset={-40}
               ease="easeInOutQuart"
             >
               About

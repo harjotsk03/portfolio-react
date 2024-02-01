@@ -615,23 +615,63 @@ body.overlay-visible {
 }
 
 .aboutSection{
-  border: solid var(--dark-blue);
-  margin-top: 10vh;
-  width: 90%;
-  height: 70vh;
+  margin-top: 10vmin;
   margin-left: auto;
   margin-right: auto;
+  padding: 3vmin;
+  width: 85%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.aboutTitle {
+  font-family: main;
+  font-size: 2.5vw;
+  margin-bottom: 1vh;
+  margin-left: 1vw;
+}
+
+.aboutText{
+  margin-left: 1vw;
+  font-family: mainMedium;
+  font-size: 1.3vw;
+  line-height: 3.5vh;
+}
+
+
 
 .contactSection{
-  border: solid var(--dark-blue);
   margin-top: 10vh;
   width: 90%;
   height: 70vh;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
 }
 
+.nameContainer{
+  display: flex;
+}
+
+.rightSideContact{
+  border-radius: 30px;
+  background-color: var(--hover);
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60vh;
+}
+
+.leftSideContact{
+  height: 60vh;
+  width: 50%;
+  padding-left: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .projectContent{
   background-color: var(--background-color);
