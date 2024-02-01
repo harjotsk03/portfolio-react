@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages';
-import { About } from './pages/about';
 import './App.css';
 import Navbar from './components/Navbar';
+import { ExpenseProject } from './components/ExpenseProject';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -29,7 +29,7 @@ function App() {
         <Navbar onToggleTheme={toggleTheme} theme={theme} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<About />} />
+          <Route path="/expenseTrackerProject" element={<ExpenseProject />} />
         </Routes>
       </Router>
     </div>

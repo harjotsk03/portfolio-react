@@ -1,9 +1,7 @@
-// VancouverTime.js
 import React, { useState, useEffect } from 'react';
 
 const VancouverTime = () => {
-  const [vancouverDate, setVancouverDate] = useState('');
-  const [vancouverTime, setVancouverTime] = useState('');
+  const [vancouverDateTime, setVancouverDateTime] = useState('');
 
   const updateVancouverTime = () => {
     const apiKey = 'YOUR_API_KEY';
@@ -13,8 +11,16 @@ const VancouverTime = () => {
       .then(response => response.json())
       .then(data => {
         const vancouverDateTime = new Date(data.utc_datetime);
-        setVancouverDate(vancouverDateTime.toLocaleDateString());
-        setVancouverTime(vancouverDateTime.toLocaleTimeString());
+        setVancouverDateTime(
+          vancouverDateTime.toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+          })
+        );
       })
       .catch(error => console.error('Error fetching Vancouver time:', error));
   };
@@ -27,11 +33,7 @@ const VancouverTime = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  return (
-    <div>
-      <div>{vancouverTime}</div>
-    </div>
-  );
+  return <div>{vancouverDateTime}</div>;
 };
 
 export default VancouverTime;
