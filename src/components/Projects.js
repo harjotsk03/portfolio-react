@@ -1,45 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import BackToProjectsButton from './BackToProjectsButton';
 
-const ToolItem = ({ tool }) => (
-  <div className="toolItem">{tool}</div>
+const ToolItem = ({ tool, className }) => (
+  <div className={`${className}`}>{tool}</div>
 );
 
-const ProjectCard = ({ title, description, button1Text, button2Text, button3Text, tools, projectLink, projectLink2, projectLink3 }) => {
+
+const ProjectCard = ({ title, shortDescription, description, button1Text, button2Text, button3Text, tools, projectLink, projectLink2, projectLink3 }) => {
+  const [isProjectTabVisible, setProjectTabVisibility] = useState(false);
+
+  const openProjectTab = () => {
+    setProjectTabVisibility(true);
+    document.body.classList.add('overlay-visible');
+  };
+
+  const closeProjectTab = () => {
+    setProjectTabVisibility(false);
+    document.body.classList.remove('overlay-visible');
+  };
+  
+
   return (
-    <div className="projectCard">
-      <div className="projectTitle">{title}</div>
-      <div className="projectDescription">{description}</div>
-      <div className='bottomHalf'>
-        <div className='projectTools'>
-          {tools.map((tool, index) => (
-            <ToolItem key={index} tool={tool} />
-          ))}
+    <>
+      <div>
+        <div className="projectCard" onClick={openProjectTab}>
+          <div className="projectTitle">{title}</div>
+          <div className="projectDescription">{description}</div>
+          <div className='bottomHalf'>
+            <div className='projectTools'>
+              {tools.map((tool, index) => (
+                <ToolItem key={index} tool={tool} className='toolItem'/>
+              ))}
+            </div>
+            <div className="projectBtnsContainer">
+              <Link style={{ textDecoration: 'none' }} to={projectLink} className='viewProject' target="_blank" rel="noopener noreferrer">{button1Text}</Link>
+              <Link style={{ textDecoration: 'none' }} to={projectLink3} className="projectBtns" id='gitHub' target="_blank" rel="noopener noreferrer">{button3Text}</Link>
+            </div>
+          </div>
         </div>
-        <div className="projectBtnsContainer">
-          <Link style={{ textDecoration: 'none' }} to={projectLink} className='viewProject' target="_blank" rel="noopener noreferrer">{button1Text}</Link>
-          <Link style={{ textDecoration: 'none' }} to={projectLink2} className="projectBtns" target="_blank" rel="noopener noreferrer">{button2Text}</Link>
-          <Link style={{ textDecoration: 'none' }} to={projectLink3} className="projectBtns" id='gitHub' target="_blank" rel="noopener noreferrer">{button3Text}</Link>
-        </div>
-      </div>
+        {isProjectTabVisible && (
+          <>
+          <div className='projectTab'>
+            <div className="closeTabButton" onClick={closeProjectTab}>
+              <BackToProjectsButton />
+            </div>
+            <div className='projectTopTab'>
+              <div className="projectTitleTab">{title}</div>
+              <div className="projectShortDescriptionTab">{shortDescription}</div>
+            </div>
+            <div className="projectDescriptionTab">{description}</div>
+            <div className='projectToolsTab'>
+              {tools.map((tool, index) => (
+                <ToolItem key={index} tool={tool} className='toolItemTab' />
+              ))}
+            </div>
+            <div className="projectBtnsContainerTab">
+              <Link style={{ textDecoration: 'none' }} to={projectLink} className='viewProjectTab' target="_blank" rel="noopener noreferrer">{button1Text}</Link>
+              <Link style={{ textDecoration: 'none' }} to={projectLink3} className="projectBtnsTab" id='gitHub' target="_blank" rel="noopener noreferrer">{button3Text}</Link>
+            </div>
+          </div>
+          <div className='projectTabLeft'></div>
+          </>
+        )}
     </div>
+    </>
   );
 };
 
 export const Projects = () => {
+  AOS.init();
+
   const projectsData = [
     {
       title: 'Expense Tracker App',
+      shortDescription: "FinVue, an up and coming finance group who have developed their own finance tracking application",
       description: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
       tools: ['React.js', 'Github', 'Firebase'],
-      button1Text: 'View Project',
-      button2Text: '%',
+      button1Text: 'View Live Site',
       button3Text: ')',
-      projectLink: '/expenseTrackerProject', // Specify the link to your project page
-      projectLink2: 'https://expense-tracker-app-b0f61.web.app/', // Specify the link to your project page
-      projectLink3: 'https://github.com/harjotsk03/expense-tracker-app', // Specify the link to your project page
+      projectLink: 'https://expense-tracker-app-b0f61.web.app/',
+      projectLink3: 'https://github.com/harjotsk03/expense-tracker-app',
     },
-    // ... other project data ...
+    // Add more projects as needed
   ];
 
   return (

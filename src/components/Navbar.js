@@ -3,6 +3,7 @@ import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch, { SwitchProps } from '@mui/material/Switch';
+import logo from '../images/logoWebsite.svg'
 
 const Navbar = ({ onToggleTheme, theme }) => {
   const buttonLabel = theme === 'light' ? 'Dark' : 'Light';
@@ -66,37 +67,40 @@ const Navbar = ({ onToggleTheme, theme }) => {
   return (
     <nav className="navbar">
       <div className='navButtonContainer'>
-        <div>
-          <ScrollLink
-            className='navButton'
-            to="projects"
-            smooth={true}
-            duration={1000}
-            offset={-100}
-            ease="easeInOutQuart"
-          >
-            Projects
-          </ScrollLink>
-          <ScrollLink
-            className='navButton'
-            to="about"
-            smooth={true}
-            duration={1000}
-            offset={-100}
-            ease="easeInOutQuart"
-          >
-            About
-          </ScrollLink>
-          <ScrollLink
-            className='navButton'
-            to="contact"
-            smooth={true}
-            duration={1000}
-            offset={-100}
-            ease="easeInOutQuart"
-          >
-            Contact
-          </ScrollLink>
+        <div className='logo'>
+          <img src={logo}></img>
+          <div>
+            <ScrollLink
+              className='navButton'
+              to="projects"
+              smooth={true}
+              duration={1000}
+              offset={-100}
+              ease="easeInOutQuart"
+            >
+              Projects
+            </ScrollLink>
+            <ScrollLink
+              className='navButton'
+              to="about"
+              smooth={true}
+              duration={1000}
+              offset={-100}
+              ease="easeInOutQuart"
+            >
+              About
+            </ScrollLink>
+            <ScrollLink
+              className='navButton'
+              to="contact"
+              smooth={true}
+              duration={1000}
+              offset={-100}
+              ease="easeInOutQuart"
+            >
+              Contact
+            </ScrollLink>
+          </div>
         </div>
         <div className='modeButton'>
           <FormControlLabel

@@ -51,8 +51,10 @@ html, body{
   --text-color: #0D0D0D;
   --accent1: #D9D9D9;
   --accent2: #404040;
-  --accent3: #cccccc;
+  --accent3: #c9c9c9;
+  --accent7: #eeeeee;
   --hover: rgb(215, 215, 215);
+  --hover2: rgb(134, 134, 134);
   --blue: #007acc;
   --dark-blue: #2d5168;
 }
@@ -60,13 +62,14 @@ html, body{
 .dark {
   --background-color: #0D0D0D;
   --text-color: #D9D9D9;
-  --accent4: #2e2e2e;
+  --accent7: #151515;
   --accent3: #1c1c1c;
   --accent2: #BFBFBF;
   --accent1: #D9D9D9;
   --hover: rgb(35, 35, 35);
+  --hover2: rgb(152, 152, 152);
   --blue: #007acc;
-  --dark-blue: #506472;
+  --dark-blue: rgb(80, 100, 114);
 }
 
 .App {
@@ -83,10 +86,10 @@ html, body{
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-around;
   position: fixed;
   width: 100vw;  
+  top: 0;
   z-index: 1; 
 }
 
@@ -94,25 +97,33 @@ html, body{
   font-family: secondary;
   text-decoration: none;
   color: var(--background-color);
-  margin: 0 2vmin 0 2vmin;
+  margin: 0 2vmin; /* Adjust margin as needed */
   transition: 0.3s ease-in-out;
   text-transform: lowercase;
   font-size: 1.2vw;
 }
 
 .navButtonContainer {
-  border-radius: 100px;
-  padding: 2vmin 3vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
+  padding: 3vmin; /* Adjust padding as needed */
   background-color: var(--text-color);
   color: var(--background-color);
   backdrop-filter: blur(30px);
-  width: 90%;
-  z-index: 999; 
+  width: 100%;
+  z-index: 999;
+}
+
+.logo{
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
+.navButtonContainer img{
+  width: 5%;
+  margin-right: 1vw;
+}
 
 .navButton:hover {
   cursor: pointer;
@@ -171,7 +182,7 @@ html, body{
 
 .heroRight img{
   width: 100%;
-  margin-top: -7vh;
+  margin-top: -12vh;
   margin-right: 2vw;
   transition: 0.75s ease-in-out;
   opacity: 80%;
@@ -180,19 +191,19 @@ html, body{
 }
 
 .heroRight img:hover{
-  transform: matrix(1, 0, 0, 1.4, 0, 0) scale(0.9);
+  transform: matrix(1, 0, 0, 1.4, 0, 0) scale(0.8);
 
 }
 
 .heroSection {
-  height: 100vh;
+  height: 92vh;
   background-color: #0D0D0D;
   width: 97%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50px;
   display: flex;
-  margin-top: -6.5vh;
+  margin-top: 2vh;
   flex-direction: row;
   align-items: center;
   margin-bottom: 8vh;
@@ -205,6 +216,7 @@ html, body{
   width: max-content;
   height: max-content;
   line-height: 22vh;
+  margin-top: -6vh;
 }
 
 .homeSecondTitle{
@@ -307,6 +319,7 @@ html, body{
 
 .projectCard:hover {
   background-color: var(--accent3);
+  cursor: pointer;
 }
 
 .projectTitle {
@@ -316,7 +329,7 @@ html, body{
 }
 
 .projectDescription {
-  font-family: secondary;
+  font-family: mainLight;
   font-size: 1.1vw;
   margin-top: -5vh;
 }
@@ -328,7 +341,7 @@ html, body{
 
 .toolItem{
   padding: 1vmin 2vmin;
-  font-family: secondary;
+  font-family: mainLight;
   font-size: 1vw;
   margin-right: 0.8vw;
   color: var(--dark-blue);
@@ -339,6 +352,215 @@ html, body{
 .projectBtns {
   display: flex;
   margin-top: auto;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the overlay color */
+  z-index: 3; /* Ensure the overlay is above other elements */
+}
+
+.projectTab.opened + .overlay {
+  display: block;
+}
+
+body {
+  overflow: auto;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Add this class to body when the tab is opened to prevent scrolling of the other content */
+body.overlay-visible {
+  overflow: hidden;
+}
+
+.projectTab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--accent7);
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+  animation: slideIn 0.5s forwards; /* Adjust duration as needed */
+}
+
+.projectTabLeft{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 888;
+}
+
+.projectTab.closed {
+  animation: slideOut 0.5s forwards; /* Adjust duration as needed */
+}
+
+.closeTabButton {
+  width: 109%;
+  margin-left: -2vw;
+  display: flex;
+  padding: 1vw 2vw;
+  font-family: main;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.closeTabButton:hover{
+  color: var(--accent3);
+}
+
+.closeTabButton button{
+  font-family: icons;
+  color: var(--text-color);
+  padding: 0.1vw 0vw;
+  background-color: transparent;
+  border: none;
+  margin-top: -2vh;
+  font-size: 0.9vw;
+}
+
+.closeTabButton button:hover{
+  cursor: pointer;
+  color: var(--accent3);
+}
+
+
+.projectTopTab{
+  margin-top: 3vh;
+}
+
+.projectTitleTab {
+  font-family: main;
+  font-size: 1.75vw;
+  margin-bottom: 0vh;
+}
+
+.projectShortDescriptionTab {
+  font-family: mainLight;
+  font-size: 1vw;
+  margin-top: 1vh;
+}
+
+.projectDescriptionTab {
+  font-family: mainLight;
+  font-size: 1vw;
+  margin-top: 5vh;
+}
+
+.projectToolsTab{
+  margin-top: 49vh;
+  display: flex;
+  margin-bottom: 1.75vh;
+}
+
+.toolItemTab{
+  padding: 1vmin 2vmin;
+  font-family: mainLight;
+  font-size: 1vw;
+  margin-right: 0.8vw;
+  color: var(--dark-blue);
+  background-color: transparent;
+  border-radius: 500px;
+}
+
+.projectBtnsTab {
+  display: flex;
+  margin-top: auto;
+}
+
+
+.viewProjectTab{
+  border: 3px solid var(--text-color);
+  padding: 1vmin 2vmin;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: main;
+  font-size: 0.75vw;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+.viewProjectTab:hover{
+  background-color: var(--dark-blue);
+  cursor: pointer;
+  color: var(--hover);
+  border: 3px solid var(--dark-blue);
+  transform: scale(0.95);
+}
+
+.projectBtnsContainerTab{
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+.projectBtnsTab{
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: icons;
+  font-size: 1.2vw;
+  border: none;
+  transition: 0.3s ease-in-out;
+  margin: 0;
+}
+
+.projectBtnsTab:hover{
+  cursor: pointer;
+  color: var(--dark-blue);
+}
+
+#gitHubTab{
+  font-family: logos;
+  font-size: 1.3vw;
+}
+
+
+
+.line{
+  width: 282%;
+  background-color: var(--dark-blue);
+  height: 0.3vh;
 }
 
 .viewProject{
