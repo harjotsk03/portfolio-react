@@ -298,6 +298,7 @@ html, body{
   font-size: 2.5vw;
   margin-bottom: 1vh;
   margin-left: 1vw;
+  
 }
 
 .projectCards{
@@ -309,33 +310,35 @@ html, body{
 }
 
 .projectCard {
-  height: 51vh;
+  height: 30vh;
   width: 24vw;
   background-color: var(--hover);
-  padding: 3vmin 4vmin;
+  padding: 3vmin 4vmin 1vmin 4vmin;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
   display: flex;
+  justify-content: end;
   flex-direction: column;
-  justify-content: space-between; /* Align items at the start and end of the container */
   margin-bottom: 4vh;
+  overflow: hidden;
 }
 
 .projectCard:hover {
-  background-color: var(--accent3);
   cursor: pointer;
 }
 
 .projectTitle {
   font-family: main;
   font-size: 1.5vw;
-  margin-bottom: 0vh;
+  margin-bottom: 1.5vh;
+  color: #eeeeee;
 }
 
 .projectDescription {
   font-family: mainLight;
   font-size: 1.1vw;
   margin-top: -5vh;
+  color: #eeeeee;
 }
 
 .projectTools{
@@ -356,6 +359,131 @@ html, body{
 .projectBtns {
   display: flex;
   margin-top: auto;
+}
+
+.projectCardNotHovered{
+  animation: fadeOut 0.5s forwards; /* Adjust duration as needed */
+  position: relative;
+  z-index: 1;
+}
+
+.projectCardHovered{
+  animation: fadeUp 0.5s forwards; /* Adjust duration as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.cardOverlay{
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 40vw;
+  margin-left: -3vw;
+  height: 50vh;
+  position: fixed;
+  margin-top: -40vh;
+  z-index: -1;
+  animation: zoomOut 0.5s forwards; /* Adjust duration as needed */
+  display: flex;
+}
+.cardOverlay2{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 90vw;
+  margin-left: -3vw;
+  height: 50vh;
+  position: fixed;
+  margin-top: -20vh;
+  z-index: -1;
+  animation: zoomIn 0.5s forwards; /* Adjust duration as needed */
+
+}
+
+.projectShortDescription{
+    animation: zoomIn 0.5s forwards; /* Adjust duration as needed */
+  font-family: mainLight;
+  margin-bottom: 1vh;
+  color: #eeeeee;
+}
+
+.projectShortDescription2{
+  animation: zoomIn 0.5s forwards; /* Adjust duration as needed */
+font-family: main;
+color: #eeeeee;
+  margin-bottom: 1vh;
+}
+
+.projectShortDescription2::after{
+  animation: zoomOut 0.5s forwards; /* Adjust duration as needed */
+
+}
+
+#finVue{
+
+  background-image: url(./images/worksafe.png);
+  background-size: fill;
+  background-position: left top;
+  background-position-x: -55px;
+}
+
+#finVue {
+  position: relative;
+}
+
+#finVue::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the color and opacity as needed */
+  z-index: 0; /* Adjust the z-index to make sure the overlay is above the image */
+}
+
+#finVue img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
@@ -408,12 +536,12 @@ body.overlay-visible {
   position: fixed;
   top: 0;
   right: 0;
-  width: 30%;
+  width: 38%;
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--accent7);
-  padding: 20px;
+  padding: 30px;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   z-index: 1000;
@@ -474,38 +602,72 @@ body.overlay-visible {
   margin-top: 3vh;
 }
 
+.projectTopTab img{
+  width: 100%;
+  margin-top: 1vh;
+  border-radius: 10px;
+}
+
+.projectTopTab img {
+  position: relative;
+}
+
+.projectTopTab img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the color and opacity as needed */
+  z-index: 1; /* Adjust the z-index to make sure the overlay is above the image */
+}
+
+
 .projectTitleTab {
   font-family: main;
   font-size: 1.75vw;
-  margin-bottom: 0vh;
+  margin-top: -2vh;
 }
 
 .projectShortDescriptionTab {
-  font-family: mainLight;
-  font-size: 1vw;
+  font-family: mainMedium;
+  font-size: 1.09vw;
   margin-top: 1vh;
 }
 
 .projectDescriptionTab {
-  font-family: mainLight;
-  font-size: 1vw;
-  margin-top: 5vh;
+  font-family: mainMedium;
+  font-size: 1.09vw;
+  margin-top: 0.5vh;
+}
+
+.projectAboutTitle{
+  font-family: main;
+  font-size: 1.3vw;
+  margin-top: 2vh;
+}
+
+.projectToolsTitle{
+  font-family: main;
+  font-size: 1.3vw;
+  margin-top: 6vh;
 }
 
 .projectToolsTab{
-  margin-top: 49vh;
+  margin-top: 1vh;
   display: flex;
-  margin-bottom: 1.75vh;
+  margin-bottom: 6vh;
 }
 
 .toolItemTab{
-  padding: 1vmin 2vmin;
+  padding: 1vmin 2vmin 0.75vmin 2vmin;
   font-family: mainLight;
   font-size: 1vw;
   margin-right: 0.8vw;
-  color: var(--dark-blue);
-  background-color: transparent;
-  border-radius: 500px;
+  color: #eeeeee;
+  background-color: var(--dark-blue);
+  border-radius: 5px;
 }
 
 .projectBtnsTab {
@@ -521,16 +683,17 @@ body.overlay-visible {
   color: var(--text-color);
   font-family: main;
   font-size: 0.75vw;
-  border-radius: 50px;
+  border-radius: 10px;
+  width: 100%;
   transition: 0.3s ease-in-out;
+  position: relative;
 }
 
 .viewProjectTab:hover{
   background-color: var(--dark-blue);
   cursor: pointer;
-  color: var(--hover);
+  color: #eeeeee;
   border: 3px solid var(--dark-blue);
-  transform: scale(0.95);
 }
 
 .projectBtnsContainerTab{
@@ -562,7 +725,7 @@ body.overlay-visible {
 
 
 .line{
-  width: 282%;
+  width: 350%;
   background-color: var(--dark-blue);
   height: 0.3vh;
 }

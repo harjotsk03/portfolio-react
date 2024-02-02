@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BackToProjectsButton from './BackToProjectsButton';
+import finVue from '../images/worksafe.png';
 
 const ToolItem = ({ tool, className }) => (
   <div className={`${className}`}>{tool}</div>
 );
 
 
-const ProjectCard = ({ title, shortDescription, description, button1Text, button2Text, button3Text, tools, projectLink, projectLink2, projectLink3 }) => {
+const ProjectCard = ({ title, shortDescription, description, button1Text, button3Text, tools, projectLink, projectLink3, id, image }) => {
   const [isProjectTabVisible, setProjectTabVisibility] = useState(false);
 
   const openProjectTab = () => {
@@ -21,25 +22,35 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
     setProjectTabVisibility(false);
     document.body.classList.remove('overlay-visible');
   };
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
   
 
   return (
     <>
       <div>
-        <div className="projectCard" onClick={openProjectTab}>
-          <div className="projectTitle">{title}</div>
-          <div className="projectDescription">{description}</div>
-          <div className='bottomHalf'>
-            <div className='projectTools'>
-              {tools.map((tool, index) => (
-                <ToolItem key={index} tool={tool} className='toolItem'/>
-              ))}
-            </div>
-            <div className="projectBtnsContainer">
-              <Link style={{ textDecoration: 'none' }} to={projectLink} className='viewProject' target="_blank" rel="noopener noreferrer">{button1Text}</Link>
-              <Link style={{ textDecoration: 'none' }} to={projectLink3} className="projectBtns" id='gitHub' target="_blank" rel="noopener noreferrer">{button3Text}</Link>
-            </div>
+        <div className="projectCard" id={id} onClick={openProjectTab} onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}>
+        {isHovered ? (
+          <div className='projectCardNotHovered'>
+            <div className='cardOverlay2'></div>
+            <div className="projectShortDescription2">Click to View <span style={{fontFamily: 'icons'}}>.</span></div>
+            <div className="projectShortDescription">{shortDescription}</div>
+            <div className="projectTitle">{title}</div>
           </div>
+        ) : (
+          <div className='projectCardNotHovered'>
+            <div className="projectTitle">{title}</div>
+          </div>
+        )}
         </div>
         {isProjectTabVisible && (
           <>
@@ -50,12 +61,19 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
             <div className='projectTopTab'>
               <div className="projectTitleTab">{title}</div>
               <div className="projectShortDescriptionTab">{shortDescription}</div>
+              <img src={image} alt={title} />
             </div>
-            <div className="projectDescriptionTab">{description}</div>
-            <div className='projectToolsTab'>
-              {tools.map((tool, index) => (
-                <ToolItem key={index} tool={tool} className='toolItemTab' />
-              ))}
+            <div>
+              <div className='projectAboutTitle'>About</div>
+              <div className="projectDescriptionTab">{description}</div>
+            </div>
+            <div>
+              <div className="projectToolsTitle">Developing Tools</div>
+              <div className='projectToolsTab'>
+                {tools.map((tool, index) => (
+                  <ToolItem key={index} tool={tool} className='toolItemTab' />
+                ))}
+              </div>
             </div>
             <div className="projectBtnsContainerTab">
               <Link style={{ textDecoration: 'none' }} to={projectLink} className='viewProjectTab' target="_blank" rel="noopener noreferrer">{button1Text}</Link>
@@ -79,10 +97,12 @@ export const Projects = () => {
       shortDescription: "FinVue, an up and coming finance group who have developed their own finance tracking application",
       description: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
       tools: ['React.js', 'Github', 'Firebase'],
-      button1Text: 'View Live Site',
+      button1Text: 'Open Project',
       button3Text: ')',
       projectLink: 'https://expense-tracker-app-b0f61.web.app/',
       projectLink3: 'https://github.com/harjotsk03/expense-tracker-app',
+      id: 'finVue',
+      image: finVue,
     },
     // Add more projects as needed
   ];
