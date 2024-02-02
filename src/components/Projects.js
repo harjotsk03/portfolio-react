@@ -40,8 +40,7 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
         <div className="projectCard" id={id} onClick={openProjectTab} onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
         {isHovered ? (
-          <div className='projectCardNotHovered'>
-            <div className='cardOverlay2'></div>
+          <div className='projectCardHovered'>
             <div className="projectShortDescription2">Click to View <span style={{fontFamily: 'icons'}}>.</span></div>
             <div className="projectShortDescription">{shortDescription}</div>
             <div className="projectTitle">{title}</div>
@@ -104,7 +103,7 @@ export const Projects = () => {
       id: 'finVue',
       image: finVue,
     },
-    // Add more projects as needed
+    
   ];
 
   return (
