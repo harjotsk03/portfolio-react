@@ -6,6 +6,7 @@ import { ScrollToTop } from '../components/ScrollToTop';
 import HarjotResume from '../images/harjotKoonerResume.pdf'
 import { Contact } from '../components/Contact';
 import { About } from '../components/About';
+import { Footer } from '../components/Footer';
 
 
 export const Home = () => {
@@ -44,6 +45,9 @@ export const Home = () => {
       <section className='contactSection' id='contact'>
         <Contact />
       </section>
+      <div>
+        <Footer />
+      </div>
       <ScrollToTop />
     </div>
 

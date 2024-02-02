@@ -28,21 +28,6 @@ font-family: mainMedium;
 src: url(./fonts/Nexa\ Light.otf);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  background-color: var(--background-color);
-
-}
-
-html, body{
-  background-color: var(--background-color);
-}
 
 
 
@@ -50,11 +35,12 @@ html, body{
   --background-color: #D9D9D9;
   --text-color: #0D0D0D;
   --accent1: #D9D9D9;
-  --accent2: #404040;
+  --accent2: #949494;
   --accent3: #c9c9c9;
   --accent7: #eeeeee;
   --hover: rgb(215, 215, 215);
   --hover2: rgb(134, 134, 134);
+  --contactBox: #adadad;
   --blue: #007acc;
   --dark-blue: #2d5168;
 }
@@ -68,8 +54,25 @@ html, body{
   --accent1: #D9D9D9;
   --hover: rgb(35, 35, 35);
   --hover2: rgb(152, 152, 152);
+  --contactBox: #1c1c1c;
   --blue: #007acc;
   --dark-blue: rgb(80, 100, 114);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: var(--background-color);
+}
+
+html, body{
+  background-color: var(--background-color);
 }
 
 .App {
@@ -160,11 +163,12 @@ html, body{
 .homeContent {
   margin-top: 2vmin;
   padding: 3vmin;
+  padding-bottom: 0;
   height: max-content;
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  overflow: hidden;
 }
 
 .heroLeft{
@@ -635,7 +639,7 @@ body.overlay-visible {
 
 .aboutText{
   margin-left: 1vw;
-  font-family: mainMedium;
+  font-family: mainLight;
   font-size: 1.3vw;
   line-height: 3.5vh;
 }
@@ -656,21 +660,56 @@ body.overlay-visible {
 }
 
 .rightSideContact{
-  border-radius: 30px;
-  background-color: var(--hover);
+  background-color: var(--contactBox);
   width: 35%;
   margin-left: auto;
   margin-right: auto;
   height: 60vh;
+  display: flex;
+}
+
+.socials{
+  width: 100%;
+  background-color: transparent;
+  z-index: 999999999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.socialsHeader{
+  font-size: 3vw;
+  font-family: logos;
+  z-index: 99999999999999;
+  color: var(--text-color);
 }
 
 .leftSideContact{
-  height: 60vh;
+  height: max-content;
   width: 50%;
   padding-left: 8vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.contactHeaderContainer{
+  width: 117%;
+}
+
+.contactTitle{
+  font-family: main;
+  font-size: 2.5vw;
+  margin-bottom: 1vh;
+  margin-left: -0.3vw;
+}
+
+.contactSecondTitle{
+  font-family: mainLight;
+  margin-top: -1vh;
+  margin-bottom: 1vh;
+  margin-left: -0.2vw;
 }
 
 .projectContent{
@@ -686,4 +725,28 @@ body.overlay-visible {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.submitBtn{
+  margin-top: 2vh;
+  font-family: main;
+  padding: 1.2vmin 2.5vmin;
+  margin-left: 2vmin;
+  border-radius: 5px;
+  border: none;
+  color: #D9D9D9;
+  background-color: var(--dark-blue);
+  transition: 0.3s ease-in-out;
+}
+
+.submitBtn:hover{
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.footerContainer{
+  height: 15vh;
+  background-color: #1c1c1c;
+  width: 105%;
+  margin-left: -3vmin;
 }
