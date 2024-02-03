@@ -94,8 +94,8 @@ export const Projects = () => {
   const projectsData = [
     {
       title: 'Expense Tracker App',
-      shortDescription: "FinVue, an up and coming finance group who have developed their own finance tracking application",
-      description: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
+      shortDescription: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
+      description: 'Designed and developed a finance tracker web application that allows users to track their incomes and expenses, as well as see a total balance. I have intergrated the ability to edit users name through Google firebase as well as authentication, database collection, and hosting all through Google firebase as well. Currently I am working on features to display the live stock market through an API, as well as the option to add cards to the wallet, and update or add a user photo.',
       tools: ['React.js', 'Github', 'Firebase'],
       button1Text: 'Open Project',
       button3Text: ')',
