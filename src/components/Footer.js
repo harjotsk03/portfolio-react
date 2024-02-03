@@ -14,7 +14,7 @@ export const Footer = () => {
     <div className="footerContainer">
       <div>
         <img onClick={toTop} className='footerLogo' src={logo} alt="Logo"></img>
-        <div className='footerText2'>Harjot Kooner 2023 ©</div>
+        <div className='footerText2'>Harjot Kooner 2024 ©</div>
       </div>
       <div>
         <div className='footerText'>Created with React.js, deployed with Github and Firebase</div>
