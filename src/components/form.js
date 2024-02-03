@@ -84,7 +84,7 @@ export const Form = ({ onFormSubmit }) => {
                 </Box>
                 <Box
                     component="form"
-                    sx={{margin: '1vw', // Change the margins (top, right, bottom, left)
+                    sx={{margin: '1vw 0vw', // Change the margins (top, right, bottom, left)
                         '& .MuiOutlinedInput-root': {
                         '& fieldset': {
                             borderColor: 'var(--text-color)',
@@ -133,7 +133,7 @@ export const Form = ({ onFormSubmit }) => {
             <Box
                 component="form"
                 sx={{
-                    margin: '1vw', // Change the margins (top, right, bottom, left)
+                    margin: '0vw 1vw', // Change the margins (top, right, bottom, left)
                     '& .MuiOutlinedInput-root': {
                     '& fieldset': {
                         borderColor: 'var(--text-color)', // Customize the border color

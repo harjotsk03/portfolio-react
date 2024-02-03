@@ -434,6 +434,10 @@ color: #eeeeee;
   margin-bottom: 1vh;
 }
 
+.projectShortDescription4{
+  display: none;
+}
+
 #finVue{
 
   background-image: url(./images/finVue.webp);
@@ -1022,7 +1026,7 @@ body.overlay-visible {
 }
 
 .inputName{
-  width: 19vw;
+  width: 19.5vw;
 }
 
 .inputEmail{
@@ -1465,6 +1469,13 @@ body.overlay-visible {
 
   }
 
+  .projectShortDescription4{
+    display: flex;
+    font-family: main;
+    opacity: 50%;
+    align-items: center;
+  }
+
   #finVue{
 
     background-image: url(./images/finVue.webp);
@@ -1692,7 +1703,7 @@ body.overlay-visible {
     background-color: transparent;
     border: none;
     margin-top: -2vh;
-    font-size: 3vw;
+    font-size: 4.5vw;
   }
 
   .closeTabButton button:hover{

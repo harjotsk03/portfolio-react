@@ -47,6 +47,7 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
           </div>
         ) : (
           <div className='projectCardNotHovered'>
+            <div className="projectShortDescription4">Click to View <span style={{fontFamily: 'icons'}}>.</span></div>
             <div className="projectTitle">{title}</div>
           </div>
         )}
