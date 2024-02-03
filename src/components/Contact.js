@@ -19,7 +19,7 @@ export const Contact = () => {
             <div className='leftSideContact'>
                 <div className='contactHeaderContainer'>
                 <h2 className='contactTitle'>Contact</h2>
-                <p className='contactSecondTitle'>Get in touch or shoot me an email directly at <span style={{fontFamily: 'main'}}>harjotsk03@gmail.com</span></p>
+                <p className='contactSecondTitle'>Get in touch or send me an email directly at <span style={{fontFamily: 'main'}}>harjotsk03@gmail.com</span></p>
                 </div>
                 
                 {isSubmitted ? (

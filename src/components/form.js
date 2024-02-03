@@ -38,7 +38,7 @@ export const Form = ({ onFormSubmit }) => {
                 <Box
                     component="form"
                     sx={{
-                        '& > :not(style)': { m: 1, width: '20vw', margin: '1vw' },
+                        '& > :not(style)': { m: 1, width: '32vw', margin: '1vw 2vw' },
                         '& .MuiOutlinedInput-root': {
                         '& fieldset': {
                             borderColor: 'var(--text-color)', // Customize the border color
@@ -85,7 +85,7 @@ export const Form = ({ onFormSubmit }) => {
                 <Box
                     component="form"
                     sx={{
-                        '& > :not(style)': { m: 1, width: '20vw', margin: '1vw' },
+                        '& > :not(style)': { m: 1, width: '31vw', margin: '1vw' },
                         '& .MuiOutlinedInput-root': {
                         '& fieldset': {
                             borderColor: 'var(--text-color)', // Customize the border color
@@ -133,7 +133,7 @@ export const Form = ({ onFormSubmit }) => {
             <Box
                 component="form"
                 sx={{
-                    '& > :not(style)': { m: 1, width: '42vw', margin: '1vw' },
+                    '& > :not(style)': { m: 1, width: '66vw', margin: '2vw' },
                     '& .MuiOutlinedInput-root': {
                     '& fieldset': {
                         borderColor: 'var(--text-color)', // Customize the border color
@@ -181,10 +181,8 @@ export const Form = ({ onFormSubmit }) => {
                 component="form"
                 sx={{
                     '& .MuiTextField-root': {
-                        m: 2,
-                        marginBottom: 0,
-                        paddingBottom: 0,
-                        width: '42vw',
+                        m: 1,
+                        width: '66vw',
                         minHeight: 'auto', // Set minHeight to 'auto' or remove it
                         maxHeight: 'auto', // Set maxHeight to 'auto' or remove it
                     },

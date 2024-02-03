@@ -38,7 +38,7 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
     <>
       <div>
         <div className="projectCard" id={id} onClick={openProjectTab} onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}>
+        onMouseLeave={handleMouseLeave}>
         {isHovered ? (
           <div className='projectCardHovered'>
             <div className="projectShortDescription2">Click to View <span style={{fontFamily: 'icons'}}>.</span></div>
@@ -82,7 +82,7 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
           <div className='projectTabLeft'></div>
           </>
         )}
-    </div>
+      </div>
     </>
   );
 };
@@ -102,8 +102,7 @@ export const Projects = () => {
       projectLink3: 'https://github.com/harjotsk03/expense-tracker-app',
       id: 'finVue',
       image: finVue,
-    },
-    
+    },  
   ];
 
   return (

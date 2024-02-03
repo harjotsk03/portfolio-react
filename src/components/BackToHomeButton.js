@@ -14,7 +14,7 @@ const BackToHome = () => {
           color: isHovered ? 'var(--hover2)' : 'var(--text-color)',
           background: 'transparent',
           border: 'none',
-          transition: '0.3s ease-in-out'
+          transition: '0.3s ease-in-out',
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
