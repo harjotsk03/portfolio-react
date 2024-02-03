@@ -262,7 +262,7 @@ html, body{
   width: max-content;
   margin-left: 0.75vw;
   padding: 1vmin 2vmin;
-  border-radius: 50px;
+  border-radius: 10px;
   border: solid 2px #cccccc;
   background-color: transparent;
   color: #549ac9;
@@ -562,6 +562,24 @@ body.overlay-visible {
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   z-index: 1000;
+  overflow-x: hidden;
+  animation: slideIn 0.5s forwards; /* Adjust duration as needed */
+}
+
+.aboutTab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--accent7);
+  padding: 30px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000;
+  overflow-x: hidden;
   animation: slideIn 0.5s forwards; /* Adjust duration as needed */
 }
 
@@ -663,6 +681,7 @@ body.overlay-visible {
   font-family: main;
   font-size: 1.3vw;
   margin-top: 2vh;
+  
 }
 
 .projectToolsTitle{
@@ -742,7 +761,13 @@ body.overlay-visible {
 
 
 .line{
-  width: 350%;
+  width: 100%;
+  background-color: var(--dark-blue);
+  height: 0.3vh;
+}
+
+.line2{
+  width: 1040%;
   background-color: var(--dark-blue);
   height: 0.3vh;
 }
@@ -824,6 +849,27 @@ body.overlay-visible {
   line-height: 3.5vh;
 }
 
+.aboutMeMore{
+  width: max-content;
+  margin-top: 2vh;
+  margin-left: 1vw;
+  border-radius:5px;
+  padding: 1vmin 2vmin;
+  border: none;
+  background-color: var(--dark-blue);
+  color: #eeeeee;
+  font-family: main;
+  font-size: 1vw;
+  transition: 0.3s ease-in-out;
+}
+
+.aboutMeMore:hover{
+  background-color: var(--text-color);
+  color: var(--background-color);
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
 
 
 .contactSection{
@@ -850,12 +896,13 @@ body.overlay-visible {
 }
 
 .socials{
-  width: 100%;
+  width: max-content;
   background-color: transparent;
   z-index: 999999999;
   display: flex;
   gap: 3vh;
-  margin-left: 8.75vw;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
   flex-direction: column;
 }
@@ -939,7 +986,9 @@ body.overlay-visible {
 }
 
 .submitBtn:hover{
-  transform: scale(0.9);
+  transform: scale(0.95);
+  background-color: var(--text-color);
+  color: var(--background-color);
   cursor: pointer;
 }
 
@@ -999,6 +1048,7 @@ body.overlay-visible {
   height: max-content;
   font-family: mainLight;
   text-align: right;
+  color: #eeeeee;
 }
 
 .footerText2{
@@ -1006,4 +1056,6 @@ body.overlay-visible {
   margin-top: 0.5vh;
   font-family: mainLight;
   text-align: left;
+  color: #eeeeee;
+
 }
