@@ -38,7 +38,7 @@ export const Form = ({ onFormSubmit }) => {
                 <Box
                     component="form"
                     sx={{
-                        '& > :not(style)': { m: 1, width: '32vw', margin: '1vw 2vw' },
+                        margin: '1vw', // Change the margins (top, right, bottom, left)
                         '& .MuiOutlinedInput-root': {
                         '& fieldset': {
                             borderColor: 'var(--text-color)', // Customize the border color
@@ -80,15 +80,15 @@ export const Form = ({ onFormSubmit }) => {
                     noValidate
                     autoComplete="off"
                     >
-                    <TextField id="outlined-basic" label="First Name" variant="outlined" onChange={(e) => setFirstName(e.target.value)}/>
+                    <TextField className='inputName' id="outlined-basic" label="First Name" variant="outlined" onChange={(e) => setFirstName(e.target.value)}/>
                 </Box>
                 <Box
                     component="form"
-                    sx={{
-                        '& > :not(style)': { m: 1, width: '31vw', margin: '1vw' },
+                    sx={{margin: '1vw', // Change the margins (top, right, bottom, left)
                         '& .MuiOutlinedInput-root': {
                         '& fieldset': {
-                            borderColor: 'var(--text-color)', // Customize the border color
+                            borderColor: 'var(--text-color)',
+                            borderWidth: '10px',
                         },
                         '&:hover fieldset': {
                             borderColor: 'var(--text-color)', // Customize the border color on hover
@@ -127,13 +127,13 @@ export const Form = ({ onFormSubmit }) => {
                     noValidate
                     autoComplete="off"
                     >
-                    <TextField id="outlined-basic" label="Last Name" variant="outlined" onChange={(e) => setLastName(e.target.value)} />
+                    <TextField className='inputName' id="outlined-basic" label="Last Name" variant="outlined" onChange={(e) => setLastName(e.target.value)} />
                 </Box>
             </div>
             <Box
                 component="form"
                 sx={{
-                    '& > :not(style)': { m: 1, width: '66vw', margin: '2vw' },
+                    margin: '1vw', // Change the margins (top, right, bottom, left)
                     '& .MuiOutlinedInput-root': {
                     '& fieldset': {
                         borderColor: 'var(--text-color)', // Customize the border color
@@ -175,17 +175,12 @@ export const Form = ({ onFormSubmit }) => {
                 noValidate
                 autoComplete="off"
                 >
-                <TextField id="outlined-basic" type='email' label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)}/>
+                <TextField className='inputEmail' id="outlined-basic" type='email' label="Email" variant="outlined" onChange={(e) => setEmail(e.target.value)}/>
             </Box>
             <Box
                 component="form"
                 sx={{
-                    '& .MuiTextField-root': {
-                        m: 1,
-                        width: '66vw',
-                        minHeight: 'auto', // Set minHeight to 'auto' or remove it
-                        maxHeight: 'auto', // Set maxHeight to 'auto' or remove it
-                    },
+                    margin: '1vw', // Change the margins (top, right, bottom, left)
                     '& .MuiOutlinedInput-root': {
                         '& fieldset': {
                             borderColor: 'var(--text-color)',
@@ -229,6 +224,7 @@ export const Form = ({ onFormSubmit }) => {
             >
                 <div>
                     <TextField
+                        className='inputMessage'
                         id="outlined-multiline-static"
                         label="Message"
                         multiline

@@ -104,6 +104,7 @@ html, body{
   transition: 0.3s ease-in-out;
   text-transform: lowercase;
   font-size: 1.2vw;
+  
 }
 
 .navButtonContainer {
@@ -333,7 +334,6 @@ html, body{
   font-size: 1.5vw;
   margin-bottom: 1.5vh;
   color: #eeeeee;
-  z-index: 999;
   position: sticky;
 }
 
@@ -972,7 +972,7 @@ body.overlay-visible {
 
 .leftSideContact{
   height: max-content;
-  width: 50%;
+  width: 60%;
   padding-left: 8vw;
   display: flex;
   flex-direction: column;
@@ -981,6 +981,7 @@ body.overlay-visible {
 
 .contactHeaderContainer{
   width: 117%;
+  
 }
 
 .contactTitle{
@@ -995,6 +996,7 @@ body.overlay-visible {
   margin-top: -1vh;
   margin-bottom: 1vh;
   margin-left: -0.2vw;
+  
 }
 
 .projectContent{
@@ -1013,7 +1015,22 @@ body.overlay-visible {
 }
 
 .form{
+  width: 100%;
+  overflow: hidden;
+  margin-left: -10vw;
   animation: zoomOut 2s forwards; /* Adjust duration as needed */
+}
+
+.inputName{
+  width: 19vw;
+}
+
+.inputEmail{
+  width: 40vw;
+}
+
+.inputMessage{
+  width: 40vw;
 }
 
 .submitBtn{
@@ -1132,7 +1149,7 @@ body.overlay-visible {
     position: fixed;
     width: 100vw;  
     top: 0;
-    z-index: 1; 
+    z-index: 99; 
   }
 
   .navButton {
@@ -1228,8 +1245,8 @@ body.overlay-visible {
   }
 
   .heroSection {
-    height: 80vh;
-    background-color: #0D0D0D;
+    height: 70vh;
+    background-color: transparent;
     width: 97%;
     margin-left: auto;
     margin-right: auto;
@@ -1238,13 +1255,13 @@ body.overlay-visible {
     margin-top: 2vh;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh
   }
 
   .homeTitle {
     font-family: main;
     font-size: 20vw;
-    color: #D9D9D9;
+    color: var(--text-color);
     width: max-content;
     height: max-content;
     line-height: 10vh;
@@ -1253,7 +1270,7 @@ body.overlay-visible {
 
   .homeSecondTitle{
     font-family: main;
-    color: #BFBFBF;
+    color: var(--text-color);
     font-size: 3vw;
     width: max-content;
     margin-top: 0vh;
@@ -1264,7 +1281,7 @@ body.overlay-visible {
 
   .time{
     font-family: main;
-    color: #BFBFBF;
+    color: var(--text-color);
     font-size: 3vw;
     width: max-content;
     margin-top: 00.5vh;
@@ -1280,7 +1297,7 @@ body.overlay-visible {
     margin-left: 0.75vw;
     padding: 1vmin 2vmin;
     border-radius: 10px;
-    border: solid 2px #cccccc;
+    border: solid 2px var(--text-color);
     background-color: transparent;
     color: #549ac9;
     font-family: main;
@@ -1297,13 +1314,11 @@ body.overlay-visible {
   }
 
   .projectsSection {
-    background-color: var(--accent3);
-    padding: 2vw 2vw 0vw 2vw;
+    background-color: transparent;
+    padding: 0vw 0vw 0vw 0vw;
     display: flex;
     flex-direction: column;
-    width: 97%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     height: max-content;
     border-radius: 25px;
     overflow: hidden;
@@ -1327,7 +1342,7 @@ body.overlay-visible {
 
   .projectCard {
     height: 30vh;
-    width: 125%;
+    width: 138%;
     background-color: var(--hover);
     padding: 3vmin 4vmin 1vmin 4vmin;
     border-radius: 10px;
@@ -1349,7 +1364,6 @@ body.overlay-visible {
     font-size: 5vw;
     margin-bottom: 1.5vh;
     color: #eeeeee;
-    z-index: 999;
     position: sticky;
   }
 
@@ -1952,7 +1966,7 @@ body.overlay-visible {
   }
 
   .rightSideContact{
-    background-color: var(--contactBox);
+    background-color: transparent;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -2136,5 +2150,25 @@ body.overlay-visible {
     text-align: left;
     margin-left: -10vw;
     color: #eeeeee;
+  }
+
+
+  .form{
+    width: 100%;
+    overflow: hidden;
+    margin-left: 8vw;
+    animation: zoomOut 2s forwards; /* Adjust duration as needed */
+  }
+
+  .inputName{
+    width: 31vw;
+  }
+
+  .inputEmail{
+    width: 64vw;
+  }
+
+  .inputMessage{
+    width: 64vw;
   }
 }
