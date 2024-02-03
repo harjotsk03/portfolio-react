@@ -1472,6 +1472,8 @@ body.overlay-visible {
   .projectShortDescription4{
     display: flex;
     font-family: main;
+    color: #eeeeee;
+
     opacity: 50%;
     align-items: center;
   }
