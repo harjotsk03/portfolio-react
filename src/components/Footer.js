@@ -1,7 +1,24 @@
-export const Footer = () =>{
-    return(
-        <div className="footerContainer">
-            
-        </div>
-    )
-}
+import React from 'react';
+import logo from '../images/logoWebsite2.svg';
+
+export const Footer = () => {
+  const toTop = () => {
+    // Scroll to the top of the page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <div className="footerContainer">
+      <div>
+        <img onClick={toTop} className='footerLogo' src={logo} alt="Logo"></img>
+        <div className='footerText2'>Harjot Kooner 2023 ©</div>
+      </div>
+      <div>
+        <div className='footerText'>Created with React.js and deployed with Github and Firebase</div>
+      </div>
+    </div>
+  );
+};

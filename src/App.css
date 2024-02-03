@@ -846,6 +846,7 @@ body.overlay-visible {
   margin-right: auto;
   height: 60vh;
   display: flex;
+  border-radius: 15px;
 }
 
 .socials{
@@ -853,16 +854,30 @@ body.overlay-visible {
   background-color: transparent;
   z-index: 999999999;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  gap: 3vh;
+  margin-left: 8.75vw;
+  justify-content: center;
   flex-direction: column;
 }
 
+.socialLine{
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
 .socialsHeader{
-  font-size: 3vw;
+  font-size: 1.75vw;
   font-family: logos;
   z-index: 99999999999999;
   color: var(--text-color);
+}
+
+.link{
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: mainLight;
+  margin-top: 0.3vh;
 }
 
 .leftSideContact{
@@ -967,7 +982,28 @@ body.overlay-visible {
 .footerContainer{
   height: 15vh;
   background-color: #1c1c1c;
-  width: 105%;
+  width: 103%;
   margin-left: -3vmin;
+  padding: 4vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.footerLogo{
+  width: 13%;
+}
+
+.footerText{
+  width: 15vw;
+  height: max-content;
+  font-family: mainLight;
+  text-align: right;
+}
+
+.footerText2{
+  height: max-content;
+  margin-top: 0.5vh;
+  font-family: mainLight;
+  text-align: left;
+}

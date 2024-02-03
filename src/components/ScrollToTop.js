@@ -5,7 +5,8 @@ export const ScrollToTop = () => {
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    setIsVisible(scrollY > 300);
+    const distanceFromBottom = document.body.scrollHeight - (scrollY + window.innerHeight);
+    setIsVisible(scrollY > 300 && distanceFromBottom > 100);
   };
 
   const scrollToTop = () => {
@@ -32,4 +33,3 @@ export const ScrollToTop = () => {
     </div>
   );
 };
-

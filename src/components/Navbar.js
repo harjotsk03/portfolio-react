@@ -64,11 +64,19 @@ const Navbar = ({ onToggleTheme, theme }) => {
   
   const label = { inputProps: { 'aria-label': 'Color switch demo' } };
 
+  const toTop = () => {
+    // Scroll to the top of the page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <nav className="navbar">
       <div className='navButtonContainer'>
         <div className='logo'>
-          <img src={logo}></img>
+          <img onClick={toTop} src={logo}></img>
           <div>
             <ScrollLink
               className='navButton'
@@ -95,7 +103,7 @@ const Navbar = ({ onToggleTheme, theme }) => {
               to="contact"
               smooth={true}
               duration={1000}
-              offset={-100}
+              offset={-210}
               ease="easeInOutQuart"
             >
               Contact
