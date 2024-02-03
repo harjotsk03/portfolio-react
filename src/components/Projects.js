@@ -42,7 +42,6 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
         {isHovered ? (
           <div className='projectCardHovered'>
             <div className="projectShortDescription2">Click to View <span style={{fontFamily: 'icons'}}>.</span></div>
-            <div className="projectShortDescription">{shortDescription}</div>
             <div className="projectTitle">{title}</div>
           </div>
         ) : (
