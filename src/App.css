@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: secondary;
-  src: url(./fonts/cocogoose/Cocogoose-Pro-Bold-trial.ttf);
+  src: url(./fonts/Nexa\ Regular.otf);
 }
 @font-face {
   font-family: icons;
@@ -214,7 +214,7 @@ html, body{
 }
 
 .homeTitle {
-  font-family: secondary;
+  font-family: main;
   font-size: 13vw;
   color: #D9D9D9;
   width: max-content;
@@ -224,7 +224,7 @@ html, body{
 }
 
 .homeSecondTitle{
-  font-family: secondary;
+  font-family: main;
   color: #BFBFBF;
   font-size: 1.3vw;
   width: max-content;
@@ -235,7 +235,7 @@ html, body{
 }
 
 .homeThirdTitle{
-  font-family: secondary;
+  font-family: main;
   color: #BFBFBF;
   font-size: 1.3vw;
   width: max-content;
@@ -246,7 +246,7 @@ html, body{
 }
 
 .time{
-  font-family: secondary;
+  font-family: main;
   color: #BFBFBF;
   font-size: 1.3vw;
   width: max-content;
@@ -1259,7 +1259,7 @@ body.overlay-visible {
   }
 
   .homeTitle {
-    font-family: mainLight;
+    font-family: main;
     font-size: 20vw;
     color: var(--text-color);
     width: max-content;
@@ -1269,7 +1269,7 @@ body.overlay-visible {
   }
 
   .homeSecondTitle{
-    font-family: mainLight;
+    font-family: main;
     color: var(--text-color);
     font-size: 2.5vw;
     width: max-content;
@@ -1280,7 +1280,7 @@ body.overlay-visible {
   }
 
   .time{
-    font-family: mainLight;
+    font-family: main;
     color: var(--text-color);
     font-size: 2.5vw;
     width: max-content;
@@ -1326,7 +1326,7 @@ body.overlay-visible {
   }
 
   .projectsTitle{
-    font-family: mainLight;
+    font-family: main;
     font-size: 7vw;
     margin-bottom: -1vh;
     margin-left: 7vw;
