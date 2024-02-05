@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BackToProjectsButton from './BackToProjectsButton';
 import finVue from '../images/worksafe.png';
+import quizApp from '../images/quizApp.png'
 
 const ToolItem = ({ tool, className }) => (
   <div className={`${className}`}>{tool}</div>
@@ -95,7 +96,7 @@ export const Projects = () => {
       title: 'Expense Tracker App',
       shortDescription: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
       description: 'Designed and developed a finance tracker web application that allows users to track their incomes and expenses, as well as see a total balance. I have intergrated the ability to edit users name through Google firebase as well as authentication, database collection, and hosting all through Google firebase as well. Currently I am working on features to display the live stock market through an API, as well as the option to add cards to the wallet, and update or add a user photo.',
-      tools: ['React.js', 'Github', 'Firebase'],
+      tools: ['React.js','Material UI', 'Github', 'Firebase'],
       button1Text: 'Open Project',
       button3Text: ')',
       projectLink: 'https://expense-tracker-app-b0f61.web.app/',
@@ -103,6 +104,19 @@ export const Projects = () => {
       id: 'finVue',
       image: finVue,
     },  
+    {
+      title: 'Quiz Creator App',
+      shortDescription: 'A custom quiz maker where users can create a custom quiz and then share the quiz with friends to attempt.',
+      description: 'This app is still in progress; however, the complete app will be created using MongoDB as the database where users will push their created quizes and then can share the quiz with a automated key code that other users can enter and attempt. The application is build with MongoDB, Express, React.js, and Node.js. The current features I am working on are the database setup, and custom quiz creation. The application will be deployed using Firebase and AWS.',
+      tools: ['React.js', 'MongoDB','Node.js','Epress', 'Firebase'],
+      button1Text: 'Open Project',
+      button3Text: ')',
+      projectLink: 'https://harjotsinghkooner.com/',
+      projectLink3: '',
+      id: 'quizApp',
+      image: quizApp,
+    }, 
+     
   ];
 
   return (

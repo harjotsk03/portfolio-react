@@ -304,7 +304,8 @@ html, body{
 .projectCards{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2vw;
   padding: 2vmin;
   flex-wrap: wrap;
 }
@@ -460,6 +461,34 @@ color: #eeeeee;
 }
 
 #finVue img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+#quizApp{
+
+  background-image: url(./images/quizApp.png);
+  background-size: cover;
+  background-position: left center;}
+
+#quizApp {
+  position: relative;
+}
+
+#quizApp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
+  z-index: 0; /* Adjust the z-index to make sure the overlay is above the image */
+}
+
+#quizApp img {
   width: 100%;
   height: auto;
   display: block;
@@ -1500,6 +1529,33 @@ body.overlay-visible {
   }
 
   #finVue img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #quizApp{
+
+    background-image: url(./images/quizApp.png);
+    background-size: contain;
+    background-position: center center;}
+
+  #quizApp {
+    position: relative;
+  }
+
+  #quizApp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
+    z-index: 0; /* Adjust the z-index to make sure the overlay is above the image */
+  }
+
+  #quizApp img {
     width: 100%;
     height: auto;
     display: block;
