@@ -1375,7 +1375,7 @@ body.overlay-visible {
 
   .projectCard {
     height: 30vh;
-    width: 138%;
+    width: 82vw;
     background-color: var(--hover);
     padding: 3vmin 4vmin 1vmin 4vmin;
     border-radius: 10px;
@@ -1410,6 +1410,7 @@ body.overlay-visible {
   .projectTools{
     margin-top: 1vh;
     display: flex;
+    flex-wrap: wrap;
   }
 
   .toolItem{
@@ -1537,8 +1538,9 @@ body.overlay-visible {
   #quizApp{
 
     background-image: url(./images/quizApp.png);
-    background-size: contain;
-    background-position: center center;}
+    background-size: cover;
+    background-position: left top;
+  }
 
   #quizApp {
     position: relative;
@@ -1837,7 +1839,8 @@ body.overlay-visible {
   .projectToolsTab{
     margin-top: 1vh;
     display: flex;
-    margin-bottom: 6vh;
+    margin-bottom: 0vh;
+    flex-wrap: wrap;
   }
 
   .toolItemTab{
@@ -1879,7 +1882,7 @@ body.overlay-visible {
     display: flex;
     gap: 1vw;
     align-items: center;
-    margin-top: 18vh;
+    margin-top: 4vh;
   }
 
   .projectBtnsTab{
