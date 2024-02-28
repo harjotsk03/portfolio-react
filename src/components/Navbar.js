@@ -4,8 +4,10 @@ import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import logo from '../images/logoWebsite.svg'
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = ({ onToggleTheme, theme }) => {
+  let navigate = useNavigate();
   const buttonLabel = theme === 'light' ? 'Dark' : 'Light';
   
 
@@ -70,6 +72,7 @@ const Navbar = ({ onToggleTheme, theme }) => {
       top: 0,
       behavior: 'smooth'
     });
+    navigate('/');
   };
 
   return (

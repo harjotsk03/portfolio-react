@@ -93,7 +93,7 @@ html, body{
   position: fixed;
   width: 100vw;  
   top: 0;
-  z-index: 1; 
+  z-index: 99; 
 }
 
 .navButton {
@@ -305,7 +305,7 @@ html, body{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 2vw;
+  gap: 1vw;
   padding: 2vmin;
   flex-wrap: wrap;
 }
@@ -495,6 +495,35 @@ color: #eeeeee;
 }
 
 
+#luluApp{
+
+  background-image: url(./images/lululemonOMNI/lulu2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0D0D0D;
+}
+
+#luluApp {
+  position: relative;
+}
+
+#luluApp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
+  z-index: 0; /* Adjust the z-index to make sure the overlay is above the image */
+}
+
+#luluApp img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 @keyframes fadeUp {
   0% {
@@ -1153,11 +1182,84 @@ body.overlay-visible {
 
 }
 
+.imageTabOpen {
+  width: 100%;
+  height: 35vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the image vertically */
+  border-radius: 15px;
+}
+
+.imageTabOpen img {
+  width: auto;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+#luluApp1{
+  background-color: #0D0D0D;
+  padding-bottom: 1vh;
+  margin-top: 1vh;
+}
 
 
 
 
+.singleProject{
+  padding-top: 5vh;
+  background-color: var(--background-color);
+  height: max-content;
+  padding-bottom: 5vh;
+}
 
+.singleProjectTitle{
+  font-family: main;
+  color: var(--text-color);
+  margin-left: 2vw;
+  font-size: 3.5vw;
+}
+
+.singleProjectTitle2{
+  font-family: main;
+  margin-left: 2vw;
+  font-size: 1.5vw;
+  margin-bottom: 2vh;
+  margin-top: 6vh;
+}
+
+.singleProjectText{
+  width: 85%;
+  font-family: mainLight;
+  margin-left: 2vw;
+  font-size: 1.3vw;
+  margin-bottom: 6vh;
+}
+
+.singleProjectImages{
+  margin-left: 2vw;
+  gap: 1vw;
+  display: flex;
+  padding-bottom: 2vh;
+  overflow-y: scroll;
+}
+
+.singleProjectImages img{
+  width: 35vh;
+  border-radius: 50px;
+}
+
+.singleProjectVideo{
+  margin-left: 2vw;
+  gap: 1vw;
+  display: flex;
+}
+
+.singleProjectVideo video{
+  width: 40vh;
+  border-radius: 55px;
+}
 
 
 
@@ -1182,7 +1284,7 @@ body.overlay-visible {
     position: fixed;
     width: 100vw;  
     top: 0;
-    z-index: 99; 
+    z-index: 999999999; 
   }
 
   .navButton {
@@ -2243,4 +2345,87 @@ body.overlay-visible {
   .inputMessage{
     width: 64vw;
   }
+  
+
+  .imageTabOpen {
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image vertically */
+    border-radius: 15px;
+  }
+  
+  .imageTabOpen img {
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+  }
+  
+  #luluApp1{
+    background-color: #0D0D0D;
+    padding-bottom: 1vh;
+    margin-top: 1vh;
+  }
+
+
+
+  .singleProject{
+    padding-top: 2vh;
+    background-color: var(--background-color);
+    height: max-content;
+    padding-bottom: 5vh;
+  }
+
+  .singleProjectTitle{
+    font-family: main;
+    color: var(--text-color);
+    margin-left: 4vw;
+    font-size: 10vw;
+  }
+
+  .singleProjectTitle2{
+    font-family: main;
+    margin-left: 4vw;
+    font-size: 5vw;
+    margin-bottom: 2vh;
+    margin-top: 0vh;
+  }
+
+  .singleProjectText{
+    width: 90%;
+    font-family: mainLight;
+    margin-left: 4vw;
+    font-size: 5vw;
+    margin-bottom: 6vh;
+  }
+
+  .singleProjectImages{
+    margin-left: 4vw;
+    gap: 1vw;
+    display: flex;
+    padding-bottom: 2vh;
+    overflow-y: scroll;
+    margin-bottom: 2vh;
+  }
+
+  .singleProjectImages img{
+    width: 35vh;
+    border-radius: 50px
+  }
+
+  .singleProjectVideo{
+    margin-left: 4vw;
+    gap: 1vw;
+    display: flex;
+    margin-bottom: 4vh;
+  }
+
+  .singleProjectVideo video{
+    width: 40vh;
+    border-radius: 55px;
+  }
+
+
 }

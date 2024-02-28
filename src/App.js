@@ -4,6 +4,7 @@ import { Home } from './pages';
 import './App.css';
 import Navbar from './components/Navbar';
 import { ExpenseProject } from './components/ExpenseProject';
+import { OMNIProject } from './components/OMNIProject';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/expenseTrackerProject" element={<ExpenseProject />} />
+          <Route path="/OMNIproject" element={<OMNIProject />} />
         </Routes>
       </Router>
     </div>

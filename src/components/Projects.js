@@ -5,13 +5,14 @@ import 'aos/dist/aos.css';
 import BackToProjectsButton from './BackToProjectsButton';
 import finVue from '../images/worksafe.png';
 import quizApp from '../images/quizApp.png'
+import lulu1 from '../images/lululemonOMNI/lulu2.png'
 
 const ToolItem = ({ tool, className }) => (
   <div className={`${className}`}>{tool}</div>
 );
 
 
-const ProjectCard = ({ title, shortDescription, description, button1Text, button3Text, tools, projectLink, projectLink3, id, image }) => {
+const ProjectCard = ({ title, shortDescription, description, button1Text, button3Text, tools, projectLink, projectLink3, id, image, idIMG }) => {
   const [isProjectTabVisible, setProjectTabVisibility] = useState(false);
 
   const openProjectTab = () => {
@@ -61,7 +62,9 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
             <div className='projectTopTab'>
               <div className="projectTitleTab">{title}</div>
               <div className="projectShortDescriptionTab">{shortDescription}</div>
-              <img src={image} alt={title} />
+              <div className='imageTabOpen' id={idIMG}>
+                <img src={image} alt={title} />
+              </div>
             </div>
             <div>
               <div className='projectAboutTitle'>About</div>
@@ -103,6 +106,7 @@ export const Projects = () => {
       projectLink3: 'https://github.com/harjotsk03/expense-tracker-app',
       id: 'finVue',
       image: finVue,
+      idIMG: '',
     },  
     {
       title: 'Quiz Creator App',
@@ -115,6 +119,20 @@ export const Projects = () => {
       projectLink3: '',
       id: 'quizApp',
       image: quizApp,
+      idIMG: '',
+    }, 
+    {
+      title: 'Lululemon OMNI Redesign',
+      shortDescription: 'A redesign of the OMNI application used by Lululemon in retail stores to process online purchases.',
+      description: 'This is a UI/UX redesign of an application Lululemon have in all of their retail stores. Currently I am an educator working with this app every shift and have heard many comoplaints and issues with the usability and features of the current application. My aim is to design a new UI/UX that will be easier to use for educators and the retail stores and then to have my work seen by a developer at Lululemon to either use or take peices from my design. Once I have a full UI/UX design I will attempt to develop the application on my own using React Native and other frameworks and languages.',
+      tools: ['Figma', 'React Native'],
+      button1Text: 'View Full Project',
+      button3Text: ')',
+      projectLink: '/OMNIproject',
+      projectLink3: '',
+      id: 'luluApp',
+      image: lulu1,
+      idIMG: 'luluApp1',
     }, 
      
   ];
