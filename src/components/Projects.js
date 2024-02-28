@@ -128,7 +128,7 @@ export const Projects = () => {
       tools: ['Figma', 'React Native'],
       button1Text: 'View Full Project',
       button3Text: ')',
-      projectLink: 'https://harjotsinghkooner.com/OMNIproject',
+      projectLink: '/OMNIproject',
       projectLink3: '',
       id: 'luluApp',
       image: lulu1,
