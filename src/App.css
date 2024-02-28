@@ -163,7 +163,7 @@ html, body{
 
 .homeContent {
   margin-top: 2vmin;
-  padding: 3vmin;
+  padding-top: 2vmin;
   padding-bottom: 0;
   height: max-content;
   display: flex;
@@ -1153,8 +1153,7 @@ body.overlay-visible {
 .footerContainer{
   height: 15vh;
   background-color: #1c1c1c;
-  width: 103%;
-  margin-left: -3vmin;
+  width: 100%;
   padding: 4vmin;
   overflow: hidden;
   display: flex;
