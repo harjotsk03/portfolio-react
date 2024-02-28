@@ -8,23 +8,27 @@ import img8 from '../images/lululemonOMNI/lulu8.png';
 import img9 from '../images/lululemonOMNI/lulu9.png';
 import img10 from '../images/lululemonOMNI/lulu10.png';
 import img11 from '../images/lululemonOMNI/lulu11.png';
-import luluVideo from '../images/lululemonOMNI/luluVideo.mp4';
+import luluVideo from '../images/lululemonOMNI/luluVideo2.mp4';
+import { Footer } from './Footer';
 
 export const OMNIProject = () => {
 
     
     return(
+        <>
         <div className="singleProject">
-            <h1 className="singleProjectTitle">OMNI PROJECT</h1>
+            <h1 className="singleProjectTitle">Lululemon OMNI App Redesign</h1>
 
-            <h4 className="singleProjectTitle2">A redesign of the OMNI application used by Lululemon in retail stores to process online purchases.</h4>
+            <div className=''>
+                <div className='singleProjectTextContainer'>
+                    <h4 className="singleProjectTitle2">A redesign of the OMNI application used by Lululemon in retail stores to process online purchases.</h4>
+                    <p className="singleProjectText">This is a UI/UX redesign of an application Lululemon have in all of their retail stores. Currently I am an educator working with this app every shift and have heard many comoplaints and issues with the usability and features of the current application. My aim is to design a new UI/UX that will be easier to use for educators and the retail stores and then to have my work seen by a developer at Lululemon to either use or take peices from my design. Once I have a full UI/UX design I will attempt to develop the application on my own using React Native and other frameworks and languages.</p>
+                </div>
 
-            <p className="singleProjectText">This is a UI/UX redesign of an application Lululemon have in all of their retail stores. Currently I am an educator working with this app every shift and have heard many comoplaints and issues with the usability and features of the current application. My aim is to design a new UI/UX that will be easier to use for educators and the retail stores and then to have my work seen by a developer at Lululemon to either use or take peices from my design. Once I have a full UI/UX design I will attempt to develop the application on my own using React Native and other frameworks and languages.</p>
-
-            <div className='singleProjectVideo'>
-                <video src={luluVideo} autoPlay loop muted />
+                <div className='singleProjectVideo'>
+                    <video src={luluVideo} autoPlay loop muted />
+                </div>
             </div>
-
 
             <div>
                 <h3 className="singleProjectTitle2">Log In and Home Page</h3>
@@ -45,5 +49,7 @@ export const OMNIProject = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     )
 }

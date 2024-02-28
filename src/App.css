@@ -1156,6 +1156,7 @@ body.overlay-visible {
   width: 103%;
   margin-left: -3vmin;
   padding: 4vmin;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1208,7 +1209,7 @@ body.overlay-visible {
 
 
 .singleProject{
-  padding-top: 5vh;
+  padding-top: 8vh;
   background-color: var(--background-color);
   height: max-content;
   padding-bottom: 5vh;
@@ -1218,30 +1219,43 @@ body.overlay-visible {
   font-family: main;
   color: var(--text-color);
   margin-left: 2vw;
-  font-size: 3.5vw;
+  font-size: 4vw;
+  text-align: center;
+}
+
+.singleProjectTextContainer{
+
+}
+
+.singleProjectTopSectionContainer{
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
 }
 
 .singleProjectTitle2{
   font-family: main;
-  margin-left: 2vw;
-  font-size: 1.5vw;
+  margin-left: 6vw;
+  font-size: 1.75vw;
   margin-bottom: 2vh;
   margin-top: 6vh;
 }
 
 .singleProjectText{
-  width: 85%;
   font-family: mainLight;
-  margin-left: 2vw;
-  font-size: 1.3vw;
-  margin-bottom: 6vh;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  font-size: 1.4vw;
 }
 
 .singleProjectImages{
-  margin-left: 2vw;
+  margin-left: 6vw;
   gap: 1vw;
   display: flex;
   padding-bottom: 2vh;
+  width: 87%;
   overflow-y: scroll;
 }
 
@@ -1251,14 +1265,14 @@ body.overlay-visible {
 }
 
 .singleProjectVideo{
-  margin-left: 2vw;
   gap: 1vw;
   display: flex;
+  margin-top: 4vh;
+  justify-content: center;
 }
 
 .singleProjectVideo video{
-  width: 40vh;
-  border-radius: 55px;
+  border-radius: 10px;
 }
 
 
@@ -2293,10 +2307,11 @@ body.overlay-visible {
   .footerContainer{
     height: max-content;
     background-color: #1c1c1c;
-    width: 110%;
+    width: 100%;
     margin-left: -3vmin;
     padding: 6vmin 4vmin;
     display: flex;
+    overflow: hidden;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -2371,61 +2386,84 @@ body.overlay-visible {
 
 
 
+  
+
   .singleProject{
-    padding-top: 2vh;
+    padding-top: 4vh;
     background-color: var(--background-color);
     height: max-content;
-    padding-bottom: 5vh;
+    padding-bottom: 0vh;
   }
 
   .singleProjectTitle{
     font-family: main;
     color: var(--text-color);
-    margin-left: 4vw;
+    margin-left: 2vw;
     font-size: 10vw;
+    line-height: 10vw;
+    text-align: center;
+  }
+
+  .singleProjectTextContainer{
+    
+  }
+
+  .singleProjectTopSectionContainer{
+    margin-top: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
   }
 
   .singleProjectTitle2{
     font-family: main;
-    margin-left: 4vw;
-    font-size: 5vw;
+    margin-left: 6vw;
+    font-size: 3.5vw;
     margin-bottom: 2vh;
-    margin-top: 0vh;
+    margin-top: 3vh;
+    width: 90%;
+    text-align: center;
   }
 
   .singleProjectText{
-    width: 90%;
     font-family: mainLight;
-    margin-left: 4vw;
-    font-size: 5vw;
-    margin-bottom: 6vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    font-size: 3vw;
+    text-align: center;
   }
 
   .singleProjectImages{
-    margin-left: 4vw;
+    margin-left: 6vw;
     gap: 1vw;
     display: flex;
     padding-bottom: 2vh;
+    width: 85%;
     overflow-y: scroll;
-    margin-bottom: 2vh;
   }
 
   .singleProjectImages img{
-    width: 35vh;
-    border-radius: 50px
+    width: 25vh;
+    border-radius: 40px;
   }
 
   .singleProjectVideo{
-    margin-left: 4vw;
     gap: 1vw;
     display: flex;
-    margin-bottom: 4vh;
+    margin-top: 4vh;
+    height: 30vh;
+    overflow: hidden;
+    justify-content: center;
   }
 
   .singleProjectVideo video{
-    width: 40vh;
-    border-radius: 55px;
+    border-radius: 10px;
   }
+
+
+
+
 
 
 }
