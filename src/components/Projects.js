@@ -79,7 +79,13 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
               </div>
             </div>
             <div className="projectBtnsContainerTab">
-              <Link style={{ textDecoration: 'none' }} to={projectLink} className='viewProjectTab' target="_blank" rel="noopener noreferrer">{button1Text}</Link>
+            <Link
+              style={{ textDecoration: 'none' }}
+              to={projectLink}
+              className='viewProjectTab'
+              target="_blank"
+              rel="noopener noreferrer"
+            >{button1Text}</Link>
               <Link style={{ textDecoration: 'none' }} to={projectLink3} className="projectBtnsTab" id='gitHub' target="_blank" rel="noopener noreferrer">{button3Text}</Link>
             </div>
           </div>
@@ -128,7 +134,7 @@ export const Projects = () => {
       tools: ['Figma', 'React Native'],
       button1Text: 'View Full Project',
       button3Text: ')',
-      projectLink: '/OMNIproject',
+      projectLink: 'https://harjotsinghkooner.com/OMNIproject',
       projectLink3: '',
       id: 'luluApp',
       image: lulu1,

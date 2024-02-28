@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages';
 import './App.css';
 import Navbar from './components/Navbar';
-import { ExpenseProject } from './components/ExpenseProject';
 import { OMNIproject } from './pages/OMNIproject';
 
 function App() {
