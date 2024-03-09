@@ -6,6 +6,7 @@ import BackToProjectsButton from './BackToProjectsButton';
 import finVue from '../images/worksafe.png';
 import quizApp from '../images/quizApp.png'
 import lulu1 from '../images/lululemonOMNI/lulu2.png'
+import algorithmly from '../images/algorithmly.png'
 
 const ToolItem = ({ tool, className }) => (
   <div className={`${className}`}>{tool}</div>
@@ -115,17 +116,17 @@ export const Projects = () => {
       idIMG: '',
     },  
     {
-      title: 'Quiz Creator App',
-      shortDescription: 'A custom quiz maker where users can create a custom quiz and then share the quiz with friends to attempt.',
-      description: 'This app is still in progress; however, the complete app will be created using MongoDB as the database where users will push their created quizes and then can share the quiz with a automated key code that other users can enter and attempt. The application is build with MongoDB, Express, React.js, and Node.js. The current features I am working on are the database setup, and custom quiz creation. The application will be deployed using Firebase and AWS.',
-      tools: ['React.js', 'MongoDB','Node.js','Epress', 'Firebase'],
+      title: 'Algorithmly',
+      shortDescription: 'A web application for learning search and sort algorithms with quizes and visualization.',
+      description: 'This application allows for students or just about anyone to learn and understand various search and sort algorithms. Using the custom designed visualizer as well as exmaples, time complexities (Big O) and use case examples users can understand the basics of any algorithm. Users can also impliemnt and practice using it as each algorithm has the corresponding pseudocode.',
+      tools: ['React.js', 'Firebase'],
       button1Text: 'Open Project',
       button3Text: ')',
-      projectLink: 'https://harjotsinghkooner.com/',
+      projectLink: 'https://algorithmly-92b0d.firebaseapp.com/',
       projectLink3: '',
       id: 'quizApp',
-      image: quizApp,
-      idIMG: '',
+      image: algorithmly,
+      idIMG: 'algoritmly1',
     }, 
     {
       title: 'Lululemon OMNI Redesign',

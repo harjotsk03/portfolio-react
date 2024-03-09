@@ -469,9 +469,9 @@ color: #eeeeee;
 
 #quizApp{
 
-  background-image: url(./images/quizApp.png);
+  background-image: url(./images/algorithmly.png);
   background-size: cover;
-  background-position: left center;}
+  background-position: center center;}
 
 #quizApp {
   position: relative;
@@ -1204,6 +1204,16 @@ body.overlay-visible {
   margin-top: 1vh;
 }
 
+#algoritmly1{
+  padding-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+#algoritmly1 img{
+  transform: scale(1.1);
+  padding-left: 5vw;
+}
+
 
 
 
@@ -1222,9 +1232,7 @@ body.overlay-visible {
   text-align: center;
 }
 
-.singleProjectTextContainer{
 
-}
 
 .singleProjectTopSectionContainer{
   margin-top: 4vh;
@@ -2403,9 +2411,6 @@ body.overlay-visible {
     text-align: center;
   }
 
-  .singleProjectTextContainer{
-    
-  }
 
   .singleProjectTopSectionContainer{
     margin-top: 4vh;
