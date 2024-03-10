@@ -834,6 +834,14 @@ body.overlay-visible {
   margin-bottom: 6vh;
 }
 
+.projectSkillsTab{
+  margin-top: 1vh;
+  display: flex;
+  margin-bottom: 6vh;
+  flex-wrap: wrap; 
+  gap: 1vw;
+}
+
 .toolItemTab{
   padding: 1vmin 2vmin 0.75vmin 2vmin;
   font-family: mainLight;

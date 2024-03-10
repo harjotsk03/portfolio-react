@@ -15,7 +15,7 @@ const ToolItem = ({ tool, className }) => (
 );
 
 
-const ProjectCard = ({ title, shortDescription, description, button1Text, button3Text, tools, projectLink, projectLink3, id, image, idIMG, appType }) => {
+const ProjectCard = ({ title, shortDescription, description, button1Text, button3Text, tools, skills, projectLink, projectLink3, id, image, idIMG, appType }) => {
   const [isProjectTabVisible, setProjectTabVisibility] = useState(false);
 
   const openProjectTab = () => {
@@ -75,10 +75,16 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
               <div className="projectDescriptionTab">{description}</div>
             </div>
             <div>
-              <div className="projectToolsTitle">Developing Tools</div>
+              <div className="projectToolsTitle">Technical Tools</div>
               <div className='projectToolsTab'>
                 {tools.map((tool, index) => (
                   <ToolItem key={index} tool={tool} className='toolItemTab' />
+                ))}
+              </div>
+              <div className="projectToolsTitle">Skills</div>
+              <div className='projectSkillsTab'>
+                {skills.map((skill, index) => (
+                  <ToolItem key={index} tool={skill} className='toolItemTab' />
                 ))}
               </div>
             </div>
@@ -110,6 +116,7 @@ export const Projects = () => {
       shortDescription: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
       description: 'Designed and developed a finance tracker web application that allows users to track their incomes and expenses, as well as see a total balance. I have intergrated the ability to edit users name through Google firebase as well as authentication, database collection, and hosting all through Google firebase as well. Currently I am working on features to display the live stock market through an API, as well as the option to add cards to the wallet, and update or add a user photo.',
       tools: ['React.js','Material UI', 'Github', 'Firebase'],
+      skills: ['API Intergration', 'Authentication and Autorization', 'Database Collection', 'UI/UX Design', 'Version Control'],
       button1Text: 'Open Project',
       button3Text: ')',
       projectLink: 'https://expense-tracker-app-b0f61.web.app/',
@@ -124,6 +131,7 @@ export const Projects = () => {
       shortDescription: 'A web application for learning search and sort algorithms with quizes and visualization.',
       description: 'This application allows for students or just about anyone to learn and understand various search and sort algorithms. Using the custom designed visualizer as well as exmaples, time complexities (Big O) and use case examples users can understand the basics of any algorithm. Users can also impliemnt and practice using it as each algorithm has the corresponding pseudocode.',
       tools: ['React.js', 'Firebase'],
+      skills: ['Data Visualization', 'Algorithm Knowledge', 'Pseudocode Implementation', 'UI/UX Design', 'Testing and Quality Assurance'],
       button1Text: 'Open Project',
       button3Text: ')',
       projectLink: 'https://algorithmly-92b0d.firebaseapp.com/',
@@ -138,6 +146,7 @@ export const Projects = () => {
       shortDescription: 'A redesign of the OMNI application used by Lululemon in retail stores to process online purchases.',
       description: 'This is a UI/UX redesign of an application Lululemon have in all of their retail stores. Currently I am an educator working with this app every shift and have heard many comoplaints and issues with the usability and features of the current application. My aim is to design a new UI/UX that will be easier to use for educators and the retail stores and then to have my work seen by a developer at Lululemon to either use or take peices from my design. Once I have a full UI/UX design I will attempt to develop the application on my own using React Native and other frameworks and languages.',
       tools: ['Figma', 'React Native'],
+      skills: ['UI/UX Design', 'Project Management', 'Portfolio Presentation', 'Prototyping and Interaction Design', 'User Research and Testing'],
       button1Text: 'View Full Project',
       button3Text: ')',
       projectLink: 'https://harjotsinghkooner.com/OMNIproject',
@@ -152,6 +161,7 @@ export const Projects = () => {
       shortDescription: 'A 2D game for a school course (IAT 167: Game Design and Programming) with a Mario theme.',
       description: 'A simple 2D game made with P5.js, a JavaScript library. Made for IAT 167(Game Design and Programming). Mario theme with spikes and ghosts as enemies and custom graphics for various elements. Used OOP and modularization to design clean code that is easily changeable and readable.',
       tools: ['JavaScript', 'P5.js'],
+      skills: ['Game Design Principles', 'Object Oriented Programming Principles', 'Game Development', 'Creativity and Innovation'],
       button1Text: 'View Full Project',
       button3Text: ')',
       projectLink: 'https://harjotsk03.github.io/IAT167GameOne/',

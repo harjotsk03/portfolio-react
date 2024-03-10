@@ -3,7 +3,7 @@ import { Projects } from '../components/Projects';
 import VancouverTime from '../components/VancouverTime';
 import heroImage from '../images/image1.png';
 import { ScrollToTop } from '../components/ScrollToTop';
-import HarjotResume from '../images/harjotKoonerResume.pdf'
+import HarjotResume from '../images/HarjotSinghResume2024.pdf'
 import { Contact } from '../components/Contact';
 import { About } from '../components/About';
 import { Footer } from '../components/Footer';
