@@ -466,6 +466,33 @@ color: #eeeeee;
   display: block;
 }
 
+#iatGame{
+
+  background-image: url(./images/iatGame.png);
+  background-size: cover;
+  background-position: center center;}
+
+#iatGame {
+  position: relative;
+}
+
+#iatGame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
+  z-index: 0; /* Adjust the z-index to make sure the overlay is above the image */
+}
+
+#iatGame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 #quizApp{
 
@@ -762,6 +789,11 @@ body.overlay-visible {
   font-family: main;
   font-size: 1.75vw;
   margin-top: -2vh;
+}
+.projectTitleTab2 {
+  font-family: main;
+  font-size: 1.2vw;
+  margin-top: 0vh;
 }
 
 .aboutTitleTab {
@@ -1204,6 +1236,14 @@ body.overlay-visible {
   margin-top: 1vh;
 }
 
+#iatGame1{
+  margin-top: 1vh;
+}
+
+#iatGame1 img{
+  transform: scale(1.02);
+}
+
 #algoritmly1{
   padding-bottom: 1vh;
   margin-top: 1vh;
@@ -1213,8 +1253,6 @@ body.overlay-visible {
   transform: scale(1.1);
   padding-left: 5vw;
 }
-
-
 
 
 .singleProject{
@@ -1925,6 +1963,12 @@ body.overlay-visible {
     font-family: main;
     font-size: 7vw;
     margin-top: -2vh;
+  }
+
+  .projectTitleTab2 {
+    font-family: main;
+    font-size: 4vw;
+    margin-top: 0vh;
   }
 
   .aboutTitleTab {

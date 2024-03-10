@@ -7,13 +7,15 @@ import finVue from '../images/worksafe.png';
 import quizApp from '../images/quizApp.png'
 import lulu1 from '../images/lululemonOMNI/lulu2.png'
 import algorithmly from '../images/algorithmly.png'
+import iatGame from '../images/iatGame.png'
+import { fontSize } from '@mui/system';
 
 const ToolItem = ({ tool, className }) => (
   <div className={`${className}`}>{tool}</div>
 );
 
 
-const ProjectCard = ({ title, shortDescription, description, button1Text, button3Text, tools, projectLink, projectLink3, id, image, idIMG }) => {
+const ProjectCard = ({ title, shortDescription, description, button1Text, button3Text, tools, projectLink, projectLink3, id, image, idIMG, appType }) => {
   const [isProjectTabVisible, setProjectTabVisibility] = useState(false);
 
   const openProjectTab = () => {
@@ -45,7 +47,7 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
         {isHovered ? (
           <div className='projectCardHovered'>
             <div className="projectShortDescription2">Click to View <span style={{fontFamily: 'icons'}}>.</span></div>
-            <div className="projectTitle">{title}</div>
+            <div className="projectTitle">{appType}</div>
           </div>
         ) : (
           <div className='projectCardNotHovered'>
@@ -61,7 +63,8 @@ const ProjectCard = ({ title, shortDescription, description, button1Text, button
               <BackToProjectsButton />
             </div>
             <div className='projectTopTab'>
-              <div className="projectTitleTab">{title}</div>
+              <div className="projectTitleTab" >{title}</div>
+              <div className="projectTitleTab2">{appType}</div>
               <div className="projectShortDescriptionTab">{shortDescription}</div>
               <div className='imageTabOpen' id={idIMG}>
                 <img src={image} alt={title} />
@@ -114,6 +117,7 @@ export const Projects = () => {
       id: 'finVue',
       image: finVue,
       idIMG: '',
+      appType: 'Front-End Development Application'
     },  
     {
       title: 'Algorithmly',
@@ -127,6 +131,7 @@ export const Projects = () => {
       id: 'quizApp',
       image: algorithmly,
       idIMG: 'algoritmly1',
+      appType: 'Front-End Development Application'
     }, 
     {
       title: 'Lululemon OMNI Redesign',
@@ -140,6 +145,21 @@ export const Projects = () => {
       id: 'luluApp',
       image: lulu1,
       idIMG: 'luluApp1',
+      appType: 'UI/UX Design Project'
+    }, 
+    {
+      title: 'Mario Shooter',
+      shortDescription: 'A 2D game for a school course (IAT 167: Game Design and Programming) with a Mario theme.',
+      description: 'A simple 2D game made with P5.js, a JavaScript library. Made for IAT 167(Game Design and Programming). Mario theme with spikes and ghosts as enemies and custom graphics for various elements. Used OOP and modularization to design clean code that is easily changeable and readable.',
+      tools: ['JavaScript', 'P5.js'],
+      button1Text: 'View Full Project',
+      button3Text: ')',
+      projectLink: 'https://harjotsk03.github.io/IAT167GameOne/',
+      projectLink3: '',
+      id: 'iatGame',
+      image: iatGame,
+      idIMG: 'iatGame1',
+      appType: 'Game Design and Development'
     }, 
      
   ];
