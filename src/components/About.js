@@ -26,8 +26,8 @@ export const About = () => {
       setProgressWidth((prevWidth) => prevWidth + 10); // Update the width, adjust as needed
     };
 
-    const skillsList = ['Analytical Thinking', 'Attention to Detail', 'Teamwork', 'Communication Skills', 'Time Efficiancy', 'Customer Focus', 'Presentation Skills']; // Add your skills
-    const skills2List = ['Database Management', 'Objet-Oriented Programming (OOP)', 'Material UI', 'Mobile Development', 'Game Development', 'DevOps', 'Github', 'Software Development']; // Add your skills
+    const skillsList = ['Analytical Thinking', 'Attention to Detail', 'Collaboration', 'Communication Skills', 'Time Efficiancy', 'Consumer Focus', 'Reliability', 'Critical Thinking', 'Empathy', 'Open to Feedback']; 
+    const skills2List = ['Database Management', 'Objet-Oriented Programming (OOP)','Event Driven Programming','TailwindCSS', 'Human Computer Interaction', 'Mobile Development', 'Game Development', 'Responsive Web Design', 'Github', 'UI/UX']; 
 
     
     return(
@@ -35,13 +35,16 @@ export const About = () => {
         <div className="aboutSection">
             <h1 className="aboutTitle">About Me.</h1>
             <p className="aboutText">
-                born in england, i discovered my passion for football (soccer) at an early age, an enthusiasm that has defined much of my life. as a lifelong and devoted manchester united fan, the sport has not only been a source of entertainment but also a way to connect with others across borders. my journey took me to canada during my formative years, where i embraced a new identity as a proud canadian.
 
-                <br></br><br></br>my high school years at sullivan heights secondary were marked by creative endeavors. in my junior year, i took on the role of designing the yearbook, a responsibility that continued into my senior year with the design of graduation hoodies and all visual aspects of our graduation ceremony. my dedication was acknowledged with a scholarship from friesens, the publishers of the yearbook.
-
-                <br></br><br></br>while initially drawn to political science in university, my trajectory shifted when i delved into the world of coding. starting with the basics of html and css, i found my passion for computing science and interactive arts and technology. my academic journey fueled my desire to create meaningful applications that enhance daily lives. i set ambitious goals to develop an app for both apple and google play stores, combining my newfound coding skills with my lifelong love for design.
-
-                <br></br><br></br>currently focused on expanding my expertise in javascript and react, my interests lie in ui and ux design. i am fascinated by the intricacies of user interaction within applications and the importance of creating an intuitive user experience. looking ahead, i aspire to contribute my skills to major players in the tech industry, with a dream of working at ea sports on fifa or at apple, shaping the future of mobile and web-based applications. my journey in the world of technology is not just a career path; it's a pursuit of lifelong goals and a commitment to making a positive impact through innovative and user-friendly solutions.
+            Hello, I'm Harjot, a dedicated student pursuing a Bachelor of Science in Interactive Technology and Computing Science at Simon Fraser University. With a primary focus on front-end development, I'm adept at crafting seamless user experiences for web and mobile applications. However, my curiosity extends beyond the surface, allowing me to comfortably navigate both backend and frontend systems.
+            <br></br>            <br></br>
+            In my journey, I've embarked on various side projects that not only showcase my UI/UX skills but also reflect my commitment to producing clean, concise code. As I set my sights on securing an internship in development or UX research, I'm eager to apply the knowledge and expertise I've gained through coursework and personal exploration. I'm driven by the desire to continually grow and evolve, positioning myself as a valuable asset to any team.
+            <br></br>            <br></br>
+            I firmly believe that being a strong developer encompasses more than technical prowess—it's about fostering collaboration, injecting energy into the workplace, and uniting teams to create exceptional software solutions.
+            <br></br>            <br></br>
+            Beyond my professional endeavors, I find joy in spending time with my dog, Bruno, and working as a part-time educator at Lululemon. As a proud Canadian citizen and community member, I draw inspiration from my multicultural background, being a Sikh born in England, but find my true home being Canada; where I have loved every minute for the past 14 years.
+            <br></br>            <br></br>
+            To delve deeper into my technical skills and explore potential opportunities for collaboration, feel free to connect with me. I'm excited about the prospect of contributing to innovative projects and making meaningful contributions to the tech industry.
 
             </p>
             <button onClick={openProjectTab} className='aboutMeMore'>Technical Skills <span style={{fontFamily: 'icons'}}>.</span></button>
@@ -68,18 +71,38 @@ export const About = () => {
                         <SkillRectangle key={index} skill={skill} />
                         ))}
                 </div>
-                <div className="aboutTitleTab">Language Proficiency</div>
+                <div className="aboutTitleTab">Tools and Technology</div>
                 <div className='technicalSkillContainer'>
-                    <div className='languageText'>JavaScript</div>
-                    <ProgressBar progressWidth={85} />
+                    <div className='languageText'>HTML/CSS/JavaScript</div>
+                    <ProgressBar progressWidth={95} />
                 </div>
                 <div className='technicalSkillContainer'>
-                    <div className='languageText'>React.js</div>
+                    <div className='languageText'>MongoDB</div>
+                    <ProgressBar progressWidth={90} />
+                </div>
+                <div className='technicalSkillContainer'>
+                    <div className='languageText'>Figma</div>
                     <ProgressBar progressWidth={80} />
                 </div>
                 <div className='technicalSkillContainer'>
-                    <div className='languageText'>Python</div>
+                    <div className='languageText'>Node.js</div>
                     <ProgressBar progressWidth={75} />
+                </div>
+                <div className='technicalSkillContainer'>
+                    <div className='languageText'>MongoDB</div>
+                    <ProgressBar progressWidth={90} />
+                </div>
+                <div className='technicalSkillContainer'>
+                    <div className='languageText'>React Native</div>
+                    <ProgressBar progressWidth={75} />
+                </div>
+                <div className='technicalSkillContainer'>
+                    <div className='languageText'>Flask</div>
+                    <ProgressBar progressWidth={25} />
+                </div>
+                <div className='technicalSkillContainer'>
+                    <div className='languageText'>Python</div>
+                    <ProgressBar progressWidth={70} />
                 </div>
                 <div className='technicalSkillContainer'>
                     <div className='languageText'>C/C++</div>

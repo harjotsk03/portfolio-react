@@ -43,6 +43,7 @@ src: url(./fonts/Nexa\ Light.otf);
   --contactBox: #adadad;
   --blue: #007acc;
   --dark-blue: #2d5168;
+  --skills: #272727;
 }
 
 .dark {
@@ -57,6 +58,7 @@ src: url(./fonts/Nexa\ Light.otf);
   --contactBox: #1c1c1c;
   --blue: #007acc;
   --dark-blue: rgb(80, 100, 114);
+  --skills: #1c1c1c;
 }
 
 
@@ -658,7 +660,7 @@ body.overlay-visible {
   position: fixed;
   top: 0;
   right: 0;
-  width: 95%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1840,7 +1842,7 @@ body.overlay-visible {
     position: fixed;
     top: 0;
     right: 0;
-    width: 95%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1884,7 +1886,7 @@ body.overlay-visible {
   }
 
   .skill-rectangle {
-    background-color: var(--accent3);
+    background-color: var(--skills);
     color: #fff;
     padding: 1.75vmin 2.5vmin;
     border-radius: 10px;

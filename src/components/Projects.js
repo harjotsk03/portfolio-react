@@ -111,21 +111,21 @@ export const Projects = () => {
   AOS.init();
 
   const projectsData = [
-    {
-      title: 'Expense Tracker App',
-      shortDescription: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
-      description: 'Designed and developed a finance tracker web application that allows users to track their incomes and expenses, as well as see a total balance. I have intergrated the ability to edit users name through Google firebase as well as authentication, database collection, and hosting all through Google firebase as well. Currently I am working on features to display the live stock market through an API, as well as the option to add cards to the wallet, and update or add a user photo.',
-      tools: ['React.js','Material UI', 'Github', 'Firebase'],
-      skills: ['API Intergration', 'Authentication and Autorization', 'Database Collection', 'UI/UX Design', 'Version Control'],
-      button1Text: 'Open Project',
-      button3Text: ')',
-      projectLink: 'https://expense-tracker-app-b0f61.web.app/',
-      projectLink3: 'https://github.com/harjotsk03/expense-tracker-app',
-      id: 'finVue',
-      image: finVue,
-      idIMG: '',
-      appType: 'Front-End Development Application'
-    },  
+    // {
+    //   title: 'Expense Tracker App',
+    //   shortDescription: 'FinVue, an up and coming finance group who have developed their own finance tracking application to help customers keep a close eye on their money.',
+    //   description: 'Designed and developed a finance tracker web application that allows users to track their incomes and expenses, as well as see a total balance. I have intergrated the ability to edit users name through Google firebase as well as authentication, database collection, and hosting all through Google firebase as well. Currently I am working on features to display the live stock market through an API, as well as the option to add cards to the wallet, and update or add a user photo.',
+    //   tools: ['React.js','Material UI', 'Github', 'Firebase'],
+    //   skills: ['API Intergration', 'Authentication and Autorization', 'Database Collection', 'UI/UX Design', 'Version Control'],
+    //   button1Text: 'Open Project',
+    //   button3Text: ')',
+    //   projectLink: 'https://expense-tracker-app-b0f61.web.app/',
+    //   projectLink3: 'https://github.com/harjotsk03/expense-tracker-app',
+    //   id: 'finVue',
+    //   image: finVue,
+    //   idIMG: '',
+    //   appType: 'Front-End Development Application'
+    // },  
     {
       title: 'Algorithmly',
       shortDescription: 'A web application for learning search and sort algorithms with quizes and visualization.',
