@@ -533,6 +533,42 @@ color: #eeeeee;
   background-color: #0D0D0D;
 }
 
+#toDoApplication{
+
+  background-image: url(./images/toDo.PNG);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;}
+
+#toDoApplication {
+  position: relative;
+}
+
+#toDoApplication::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
+  z-index: 0; /* Adjust the z-index to make sure the overlay is above the image */
+}
+
+#toDoApplication img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+#toDoApp img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 #luluApp {
   position: relative;
 }
@@ -834,6 +870,8 @@ body.overlay-visible {
   margin-top: 1vh;
   display: flex;
   margin-bottom: 6vh;
+  flex-wrap: wrap; 
+  gap: 1vw;
 }
 
 .projectSkillsTab{
@@ -1262,6 +1300,17 @@ body.overlay-visible {
 #algoritmly1 img{
   transform: scale(1.1);
   padding-left: 5vw;
+}
+
+#toDO img{
+  transform: scale(1.1);
+  padding-left: 5vw;
+}
+
+#toDo1{
+  background-color: #0D0D0D;
+  padding-bottom: 1vh;
+  margin-top: 1vh;
 }
 
 

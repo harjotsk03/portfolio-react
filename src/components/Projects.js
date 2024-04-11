@@ -8,6 +8,7 @@ import quizApp from '../images/quizApp.png'
 import lulu1 from '../images/lululemonOMNI/lulu2.png'
 import algorithmly from '../images/algorithmly.png'
 import iatGame from '../images/iatGame.png'
+import toDo from '../images/toDo.PNG'
 import { fontSize } from '@mui/system';
 
 const ToolItem = ({ tool, className }) => (
@@ -141,21 +142,21 @@ export const Projects = () => {
       idIMG: 'algoritmly1',
       appType: 'Front-End Development Application'
     }, 
-    {
-      title: 'Lululemon OMNI Redesign',
-      shortDescription: 'A redesign of the OMNI application used by Lululemon in retail stores to process online purchases.',
-      description: 'This is a UI/UX redesign of an application Lululemon have in all of their retail stores. Currently I am an educator working with this app every shift and have heard many comoplaints and issues with the usability and features of the current application. My aim is to design a new UI/UX that will be easier to use for educators and the retail stores and then to have my work seen by a developer at Lululemon to either use or take peices from my design. Once I have a full UI/UX design I will attempt to develop the application on my own using React Native and other frameworks and languages.',
-      tools: ['Figma', 'React Native'],
-      skills: ['UI/UX Design', 'Project Management', 'Portfolio Presentation', 'Prototyping and Interaction Design', 'User Research and Testing'],
-      button1Text: 'View Full Project',
-      button3Text: ')',
-      projectLink: 'https://harjotsinghkooner.com/OMNIproject',
-      projectLink3: '',
-      id: 'luluApp',
-      image: lulu1,
-      idIMG: 'luluApp1',
-      appType: 'UI/UX Design Project'
-    }, 
+    // {
+    //   title: 'Lululemon OMNI Redesign',
+    //   shortDescription: 'A redesign of the OMNI application used by Lululemon in retail stores to process online purchases.',
+    //   description: 'This is a UI/UX redesign of an application Lululemon have in all of their retail stores. Currently I am an educator working with this app every shift and have heard many comoplaints and issues with the usability and features of the current application. My aim is to design a new UI/UX that will be easier to use for educators and the retail stores and then to have my work seen by a developer at Lululemon to either use or take peices from my design. Once I have a full UI/UX design I will attempt to develop the application on my own using React Native and other frameworks and languages.',
+    //   tools: ['Figma', 'React Native'],
+    //   skills: ['UI/UX Design', 'Project Management', 'Portfolio Presentation', 'Prototyping and Interaction Design', 'User Research and Testing'],
+    //   button1Text: 'View Full Project',
+    //   button3Text: ')',
+    //   projectLink: 'https://harjotsinghkooner.com/OMNIproject',
+    //   projectLink3: '',
+    //   id: 'luluApp',
+    //   image: lulu1,
+    //   idIMG: 'luluApp1',
+    //   appType: 'UI/UX Design Project'
+    // }, 
     {
       title: 'Mario Shooter',
       shortDescription: 'A 2D game for a school course (IAT 167: Game Design and Programming) with a Mario theme.',
@@ -170,6 +171,21 @@ export const Projects = () => {
       image: iatGame,
       idIMG: 'iatGame1',
       appType: 'Game Design and Development'
+    }, 
+    {
+      title: 'To Do Application',
+      shortDescription: 'A full stack mobile application to track your to do list.',
+      description: 'Keep on top of your school, work, and personal life with this To Do tracker. A CRUD (create, read, update, delete) application that allows users to create categories and tasks that can be given due dates and organized into categories. This application uses security measures for connecting to a data base and connecting to back end endpoints. There is also middleware in place to provide JWT tokens in order to log users out after certain amounts of time. ',
+      tools: ['Typescript', 'React Native', 'Express', 'NodeJS', 'MongoDB', 'Thunder Client', 'Expo CLI', 'GitHub'],
+      skills: ['Mobile App Development', 'UI/UX Design Principles', 'Full Stack App Development', 'Git Version Control'],
+      button1Text: 'View Full Project',
+      button3Text: ')',
+      projectLink: 'https://github.com/harjotsk03/toDoApp',
+      projectLink3: '',
+      id: 'toDoApplication',
+      image: toDo,
+      idIMG: 'toDo1',
+      appType: 'Full Stack Mobile App Development'
     }, 
      
   ];
